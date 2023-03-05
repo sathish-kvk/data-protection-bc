@@ -1,0 +1,20 @@
+<div>
+<table width="100%">
+  <tr>
+    <td width="100px">Element Name</td>
+    <td style="font-size: 14px"><b>{{elementName}}</b></td>
+  </tr>
+  <tr>
+    <td width="100px">Current Value</td>
+    <td>{{elementValue}}</td>
+  </tr>
+  <tr style="padding-bottom: 10px">
+    <td width="100px">File Name</td>
+    <td>
+      <i class="fa fa-download" aria-hidden="true" style="color: blue"></i>
+      <span [hidden]="downloading" (click)="downLoadDoc(elementID, agreementID)" style="color: blue; text-decoration-line: underline; cursor: pointer;">{{docName}}</span>
+      <img src="../../assets/img/loading_icon_sm.gif" [hidden]="!downloading">
+    </td>
+  </tr>
+</table>
+</div>

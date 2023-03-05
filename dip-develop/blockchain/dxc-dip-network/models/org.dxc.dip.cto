@@ -1,0 +1,38 @@
+/**
+ * DXC DIP Business Network
+ */
+
+namespace org.dxc.dip
+
+participant Authority identified by DIPAuthorityID { 
+  o String DIPAuthorityID
+  o String name 
+}
+
+concept Party {
+  o String partyID
+  o String name
+}
+
+concept Proof {
+  o String agreementHash
+  o PartySignature[] partySignatures
+  o DateTime createdTime
+}
+
+concept PartySignature{
+  o Party party
+  o String partySignature
+}
+
+asset ProofAsset identified by proofID {
+  o String proofID
+  --> Authority authority
+  o Proof proof
+}
+
+transaction PublishProof{
+  o String proofID
+  --> Authority authority
+  o Proof proof
+}

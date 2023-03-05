@@ -1,0 +1,6 @@
+query selectProofAssetByHash{
+  description: "Select ProofAsset with agreement Hash"
+  statement:
+      SELECT org.dxc.dip.ProofAsset
+          WHERE (proof.agreementHash == _$agreementHash)
+}

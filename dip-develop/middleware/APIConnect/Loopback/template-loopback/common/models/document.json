@@ -1,0 +1,51 @@
+{
+  "name": "document",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "agreementID": {
+      "type": "string",
+      "required": false
+    },
+    "createdDate": {
+      "type": "date",
+      "required": false
+    },
+    "documentHashID": {
+      "type": "string",
+      "required": true,
+      "isArray": false
+    },
+    "documentID": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "documentName": {
+      "type": "string",
+      "required": false
+    },
+    "documentType": {
+      "type": "string",
+      "required": false
+    },
+    "elementID": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "documentHash": {
+      "type": "belongsTo",
+      "model": "documentHash",
+      "foreignKey": "documentHashID"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,136 @@
+<div class="content">
+  <span style="color:blue; text-align: end" [hidden]="!publishResult">{{publishResult}}</span>
+  <span style="color: red; font-size: 12px">{{checkElementMsg}}</span>
+  <img src="./assets/img/loading_icon_page.gif" [hidden]="!isLoading"/>
+  <app-pagename pageName="Contract Builder" contractbuilder="active" partyName="{{loginParty}}"></app-pagename>
+  
+  
+  <div class="view">
+    <div class="row align-item-center">
+      <div class="col-sm-6" style="padding-left: 15px">
+      <div class="row">
+        <div class="col col-sm-4"><input placeholder="Contract Name" class="form-control form-control-sm" [(ngModel)]="agreementName" type="text"></div>
+        <div class="col col-sm-2" align="right">
+          <button (click)="newContractClick()" [disabled]="!agreementName" class="btn-block">New</button>
+        </div>
+        <div class="col col-sm-4">
+          <select id="listofparties">
+            <option *ngFor="let space of listOfPartiesFiltered"  value="{{space.partyID}}">
+              {{space.partyName}}
+            </option>
+        </select>
+        </div>
+        <div class="col col-sm-2" align="right"><button (click)="newPartyClick()" class="btn-block" [disabled]="!currentAgreementName">Add</button></div>
+      </div>
+      <div class="row ">
+        <div class="col-sm-4">
+          <input placeholder="Element" (keyup)="checkElementExist()" class="form-control form-control-sm" [(ngModel)]="eleName" type="text">
+          
+        </div>
+        <div class="align-contents-center col-sm-2">
+          <div class="form-group form-check " style="padding-top: 13px">
+            <input type="checkbox" class="form-check-input" checked id="cbWriteOne">
+            <label class="form-check-label" for="exampleCheck1">WriteOnce?</label>
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <select  id="elementType">
+              <option  value="">text</option>
+              <option  value="">integer</option>
+              <option  value="">numeric</option>
+              <option  value="">date</option>
+              <option  value="">time</option>
+              <option  value="">documentHash</option>
+              <option  value="">tableHash</option>
+          </select>
+        </div>
+        
+        <div class="col col-sm-2" align="right"><button (click)="newElementClick()" [disabled]="!eleName || elementExist" class="btn-block">Add</button></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">  
+          <table><tr>
+            <td style="vertical-align: top"><strong>Constraint</strong></td>
+            <td >
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="c" name="elementRuleUI" value="c" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="c"></label>
+                </div>
+            </td>
+          </tr>
+          <tr>
+              <td style="vertical-align: top"><strong>Formula</strong></td>
+              <td>
+                  <div class="custom-control custom-radio">
+                      <input type="radio" id="f" name="elementRuleUI" value="f" class="custom-control-input">
+                      <label class="custom-control-label" for="f"></label>
+                  </div>
+              </td>
+          </tr>
+        </table>    
+        </div>
+        <div class="col-sm-6">
+          <input placeholder="Rule" class="form-control form-control-sm" type="text" [(ngModel)]="ruleToAdd">
+        </div>
+        <div class="col col-sm-2" align="right"><button class="btn-block" [disabled]="selectedElement==-1 || !ruleToAdd" (click)="newRuleClick()">Add</button></div>
+      </div>
+    
+        <hr>
+        <!--Element graphic-->
+   
+      <div  id="jsoneditor" style="width: 100%; height:418px; padding: 0px; padding-bottom: 5px;"></div>
+      
+    
+    <!--end of element graphic-->
+      </div>
+      <!--JSON view -->
+     
+      <div class="col-sm-6" style="padding: 10px; padding-bottom: 0px">
+          <textarea   style="margin-bottom: 10px" readonly cols="70" >{{jsonDisplay}}
+          </textarea>
+        </div>
+      
+      <!--end of jsonView-->
+      <div style="width: 100%">
+        <table width="100%" ><tr>
+          <td width="50%">
+            <table width="100%"><tr>
+              <td>
+                <div class="row" style="padding-left: 12px; padding-right:12px">
+                <div class="col-sm-9">
+                  <div class="row" style="padding-left: 15px">
+                    
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  
+                  <button class="btn-block"  (click)="removeItem()">Remove</button>
+                </div>
+              </div>
+            </td>
+          </tr></table>
+            
+          </td>
+          
+          <td width="50%">
+            <table width="100%" style="margin:0px; padding:0px"><tr>
+              <td style="padding-left: 10px" width="30%">
+                  
+                  <upload-file [textToDisplay]="loadAgreementStr"  style="margin: 0px; padding:0px" (change)="fileChangeEvent($event)"></upload-file>
+              </td>
+              <td width="40%"></td>
+              <td align="right" style="padding-right: 8px" width="30%">
+                <button class="btn-block"  [disabled]="isLoading"  style="margin: 0px" (click)="confirmPublish()" id="btnPublish">Publish</button>
+              </td>
+            </tr></table>
+          </td>
+        </tr></table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  

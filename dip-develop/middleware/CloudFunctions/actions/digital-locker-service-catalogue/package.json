@@ -1,0 +1,7 @@
+{
+  "name": "digital-locker",
+  "version": "1.0.0",
+  "main": "digital-locker.js",
+  "dependencies": {
+  }
+}

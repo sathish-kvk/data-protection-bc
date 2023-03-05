@@ -1,0 +1,6 @@
+---
+applications:
+ - name: testservice
+   routes:
+   - route: testservice-balanced-kookaburra.eu-gb.mybluemix.net
+   memory: 256M

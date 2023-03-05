@@ -1,0 +1,8 @@
+{
+  "name": "createHash",
+  "version": "1.0.0",
+  "main": "createHash.js",
+  "dependencies": {
+    "dateformat": "*"
+  }
+}

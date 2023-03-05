@@ -1,0 +1,278 @@
+{
+  "final_JSON_4_OtherParties":{
+    "systemDetails_4_All_System": [
+      {
+        "partyName": "Barnsley Landlord Services",
+        "agreement": {
+          "elements": [
+            {
+              "elementRules": [
+                {
+                  "ruleID": "e6e836d3-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "constraint",
+                  "ruleText": "<VALUE> >= 01-May-2018"
+                },
+                {
+                  "ruleID": "e6e836d5-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "constraint",
+                  "ruleText": "<VALUE> <= 31-May-2018"
+                }
+              ],
+              "elementValue": null,
+              "elementName": "startDate",
+              "elementType": "date",
+              "elementID": "e6e836d1-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [
+                {
+                  "ruleID": "e6e836d8-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "constraint",
+                  "ruleText": "<VALUE> == 6 OR <VALUE> == 12  OR <VALUE> == 60"
+                }
+              ],
+              "elementValue": null,
+              "elementName": "period",
+              "elementType": "integer",
+              "elementID": "e6e836d6-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [
+                {
+                  "ruleID": "e6e836db-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "formula",
+                  "ruleText": "<VALUE> = startDate + MONTHS(period)"
+                }
+              ],
+              "elementValue": null,
+              "elementName": "endDate",
+              "elementType": "date",
+              "elementID": "e6e836d9-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [],
+              "elementValue": null,
+              "elementName": "ZIPCode",
+              "elementType": "text",
+              "elementID": "e6e836dc-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [],
+              "elementValue": null,
+              "elementName": "NumberOfSquareMetres",
+              "elementType": "numeric",
+              "elementID": "e6e836dd-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [
+                {
+                  "ruleID": "e6e836e0-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "constraint",
+                  "ruleText": "<VALUE> == http://zoopla.com/propertylookupAPI  OR <VALUE> == http://valueMyOffice.com/propertylookupAPI"
+                }
+              ],
+              "elementValue": null,
+              "elementName": "SourceForPropertyValueLookup",
+              "elementType": "text",
+              "elementID": "e6e836de-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [],
+              "elementValue": null,
+              "elementName": "PropertyValue",
+              "elementType": "numeric",
+              "elementID": "e6e836e1-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [
+                {
+                  "ruleID": "e6e85de2-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "formula",
+                  "ruleText": "= PropertyValue / NumberOfSquareMetres"
+                }
+              ],
+              "elementValue": null,
+              "elementName": "BasicRent",
+              "elementType": "numeric",
+              "elementID": "e6e85de0-3e1a-11e8-82ba-bda12d8fd074"
+            }
+          ],
+          "parties": [
+            {
+              "partyID": "6364d5fb-45ba-4fac-ee99-a2870e06ed21",
+              "partyName": "Barnsley Landlord Services"
+            },
+            {
+              "partyID": "f4bf9f7f-cbed-aba03-92f1-08c59d8f4a3",
+              "partyName": "Acme Ltd"
+            }
+          ],
+          "agreementHash": "",
+          "agreementName": "Simple-CRE-Contract",
+          "agreementChannelID": "",
+          "agreementStatus": "Negotiate",
+          "agreementID": "e6e836d0-3e1a-11e8-82ba-bda12d8fd074",
+          "lastProofID": ""
+        },
+        "sysDetails4Cloudant": {
+          "api_hostname": "api.eu.apiconnect.ibmcloud.com/",
+          "client_id": "10205a13-7c2d-4f36-a9c8-e6e33490c5e2",
+          "api_path": "dxc-digital-innovation-platform-barnsley-landlord-services/lb-prod/api/cloudant",
+          "client_secret": "fI7fN1eJ5yO4jU1vO5lB8wK1gH0jR1kL1tJ4bF0aI5sU5fP7bQ",
+          "api_protocol": "https"
+        },
+        "cloudFunctions": {
+          "options": {
+            "apihost": "openwhisk.eu-gb.bluemix.net",
+            "api_key": "aed2b851-d43f-462f-9165-e95e28fe1323:Kf1alhZ3H2ERJkH3lFiUQzgg58G6XSYDbUhnsHdeml2kuyuzAEtszB66l8JNG1ZN"
+          },
+          "cf_path": "DXC-Digital-Innovation-Platform_Barnsley Landlord Services"
+        },
+        "sysDetails4Sql": {
+          "api_hostname": "api.eu.apiconnect.ibmcloud.com/",
+          "client_id": "3581b265-15b2-4e61-b212-f88dba2d011e",
+          "api_path": "dxc-digital-innovation-platform-barnsley-landlord-services/lb-prod/api",
+          "client_secret": "uR5wP3cU4sK6pC6yI5tR3bI1mM6lF8tX6uC1vH7oA8pS0kF2mO",
+          "api_protocol": "https"
+        }
+      },
+      {
+        "partyName": "Acme Ltd",
+        "agreement": {
+          "elements": [
+            {
+              "elementRules": [
+                {
+                  "ruleID": "e6e836d3-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "constraint",
+                  "ruleText": "<VALUE> >= 01-May-2018"
+                },
+                {
+                  "ruleID": "e6e836d5-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "constraint",
+                  "ruleText": "<VALUE> <= 31-May-2018"
+                }
+              ],
+              "elementValue": null,
+              "elementName": "startDate",
+              "elementType": "date",
+              "elementID": "e6e836d1-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [
+                {
+                  "ruleID": "e6e836d8-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "constraint",
+                  "ruleText": "<VALUE> == 6 OR <VALUE> == 12  OR <VALUE> == 60"
+                }
+              ],
+              "elementValue": null,
+              "elementName": "period",
+              "elementType": "integer",
+              "elementID": "e6e836d6-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [
+                {
+                  "ruleID": "e6e836db-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "formula",
+                  "ruleText": "<VALUE> = startDate + MONTHS(period)"
+                }
+              ],
+              "elementValue": null,
+              "elementName": "endDate",
+              "elementType": "date",
+              "elementID": "e6e836d9-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [],
+              "elementValue": null,
+              "elementName": "ZIPCode",
+              "elementType": "text",
+              "elementID": "e6e836dc-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [],
+              "elementValue": null,
+              "elementName": "NumberOfSquareMetres",
+              "elementType": "numeric",
+              "elementID": "e6e836dd-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [
+                {
+                  "ruleID": "e6e836e0-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "constraint",
+                  "ruleText": "<VALUE> == http://zoopla.com/propertylookupAPI  OR <VALUE> == http://valueMyOffice.com/propertylookupAPI"
+                }
+              ],
+              "elementValue": null,
+              "elementName": "SourceForPropertyValueLookup",
+              "elementType": "text",
+              "elementID": "e6e836de-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [],
+              "elementValue": null,
+              "elementName": "PropertyValue",
+              "elementType": "numeric",
+              "elementID": "e6e836e1-3e1a-11e8-82ba-bda12d8fd074"
+            },
+            {
+              "elementRules": [
+                {
+                  "ruleID": "e6e85de2-3e1a-11e8-82ba-bda12d8fd074",
+                  "ruleType": "formula",
+                  "ruleText": "= PropertyValue / NumberOfSquareMetres"
+                }
+              ],
+              "elementValue": null,
+              "elementName": "BasicRent",
+              "elementType": "numeric",
+              "elementID": "e6e85de0-3e1a-11e8-82ba-bda12d8fd074"
+            }
+          ],
+          "parties": [
+            {
+              "partyID": "6364d5fb-45ba-4fac-ee99-a2870e06ed21",
+              "partyName": "Barnsley Landlord Services"
+            },
+            {
+              "partyID": "f4bf9f7f-cbed-aba03-92f1-08c59d8f4a3",
+              "partyName": "Acme Ltd"
+            }
+          ],
+          "agreementHash": "",
+          "agreementName": "Simple-CRE-Contract",
+          "agreementChannelID": "",
+          "agreementStatus": "Negotiate",
+          "agreementID": "e6e836d0-3e1a-11e8-82ba-bda12d8fd074",
+          "lastProofID": ""
+        },
+        "sysDetails4Cloudant": {
+          "api_hostname": "api.eu.apiconnect.ibmcloud.com/",
+          "client_id": "4da8634a-30d6-4a46-a74f-e8c81e35cd54",
+          "api_path": "dxc-digital-innovation-platform-acme-ltd/lb-prod/api/cloudant",
+          "client_secret": "K1aR5pS5sF4lW3pU0jU1kL8sB3lN5mQ8xQ0iU3cJ4xN3pW0mK7",
+          "api_protocol": "https"
+        },
+        "cloudFunctions": {
+          "options": {
+            "apihost": "openwhisk.eu-gb.bluemix.net",
+            "api_key": "7b126823-fdd0-45ec-b372-7f3958d3c2dd:LDpEEb4RrBGs0lo2bhm9hD4GaRbwsmsmh4jCXbkTWRohnO2ydNS39OindzAXjYyv"
+          },
+          "cf_path": "DXC-Digital-Innovation-Platform_Acme Ltd"
+        },
+        "sysDetails4Sql": {
+          "api_hostname": "api.eu.apiconnect.ibmcloud.com/",
+          "client_id": "77fc4cc2-1e5c-4702-8b58-5ce70f68cc95",
+          "api_path": "dxc-digital-innovation-platform-acme-ltd/lb-prod/api",
+          "client_secret": "uJ2xX8aB1nA8jT3dH8jG0mQ5dW3eK8xT7yU6mT0xY7yG4xM6vU",
+          "api_protocol": "https"
+        }
+      }
+    ]
+  },
+   "agreementHash":"4e5c753683d91c9b585cbae6c595ba2e360c34b63baa9d1b6e589fb714f8a2c0"
+  
+  }

@@ -1,0 +1,17 @@
+table, textarea, input {
+  width: 100%;
+}
+
+input {
+  margin-bottom: 0px;
+}
+
+.tick:before {
+  content: "\2713";
+  color: green;
+}
+
+.source-hash,
+.proof-hash {
+  width: 80%;
+}

@@ -1,0 +1,12 @@
+{
+    "limits" : {
+        "timeout": 60000,
+        "memory": 256
+    },
+    "exec":{
+        "code": "function addValues (x, y) {return x + y;}",
+        "kind": "nodejs:6"
+    },
+    "publish": true,
+    "version":"1.0.0"
+}

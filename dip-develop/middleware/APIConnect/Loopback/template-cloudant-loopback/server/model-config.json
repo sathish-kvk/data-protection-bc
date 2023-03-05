@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "agreement": {
+    "dataSource": "cloudant-datasource",
+    "public": true
+  },
+  "signature": {
+    "dataSource": "cloudant-datasource",
+    "public": true
+  },
+  "agreementHash": {
+    "dataSource": "cloudant-datasource",
+    "public": true
+  },
+  "tableHash": {
+    "dataSource": "cloudant-datasource",
+    "public": true
+  }
+}

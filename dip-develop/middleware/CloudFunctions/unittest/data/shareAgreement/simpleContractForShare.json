@@ -1,0 +1,92 @@
+{
+  "agreementName": "Simple-CRE-Contract-dtest-48",
+  "elements": [
+    {
+      "elementName": "startDate",
+      "elementType": "date",
+      "elementRules": [
+        {
+          "ruleType": "constraint",
+          "ruleText": "<VALUE> >= 01-May-2018"
+        },
+        {
+          "ruleType": "constraint",
+          "ruleText": "<VALUE> <= 31-May-2018"
+        }    
+
+        ]
+    },
+    {
+      "elementName": "period",
+      "elementType": "integer",
+      "elementRules": [
+        {
+          "ruleType": "constraint",
+          "ruleText": "<VALUE> == 6 OR <VALUE> == 12  OR <VALUE> == 60"
+        }
+      ]
+    },
+    {
+      "elementName": "endDate",
+      "elementType": "date",
+      "elementRules": [
+        {
+          "ruleType": "formula",
+          "ruleText": "<VALUE> = startDate + MONTHS(period)"
+        }    
+
+      ]
+    },	
+    {
+      "elementName": "ZIPCode",
+      "elementType": "text"
+    },
+    {
+      "elementName": "NumberOfSquareMetres",
+      "elementType": "numeric"
+    },
+    {
+      "elementName": "SourceForPropertyValueLookup",
+      "elementType": "text",
+      "elementRules": [
+        {
+          "ruleType": "constraint",
+          "ruleText":  "<VALUE> == http://zoopla.com/propertylookupAPI  OR <VALUE> == http://valueMyOffice.com/propertylookupAPI"
+        }
+      ]
+    },
+    {
+      "elementName": "PropertyValue",
+      "elementType": "numeric"
+
+    },
+    {
+      "elementName": "BasicRent",
+      "elementType": "numeric",
+      "elementRules": [
+        {
+          "ruleType": "formula",
+          "ruleText": "= PropertyValue / NumberOfSquareMetres"
+        }
+      ]
+    }
+  ],
+  "parties": [
+    {
+      "partyName": "Rigsby Landlords",
+      "partyID": "e6ea4437-7cce-4f80-e0f4-c3cc64089646"
+    },
+    {
+      "partyName": "Barnsley Landlord Services",
+      "partyID": "6364d5fb-45ba-4fac-ee99-a2870e06ed21"
+    },
+    {
+      "partyName": "Acme Ltd",
+      "partyID": "f4bf9f7f-cbed-aba03-92f1-08c59d8f4a3"
+    },
+    {
+      "partyName": "Property Management PLC",
+      "partyID": "7dbf0837-97fb-eba78-7cd1-4f5923280ac"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+<div class="content">
+  <app-pagename pageName="All Json files" alldoc="active" partyName="{{loginParty}}"></app-pagename>
+  <div class="view">
+    <div class="row">
+      <div class="col-sm-4" style="padding-left: 30px">
+        <input type="file" id="jsonFile" (change)="inputOnchange($event)" accept=".json">
+      </div>
+      <div class="col-sm-2">
+        <button (click)="addTableHash()" [disabled]="!fileName"  style="font-size: 18px; margin-top: 10px; width:90px">Upload</button>
+      </div>
+    </div>
+    
+    <div class="row">
+            <div class="col-sm-12" style="padding: 30px">
+              <img src="../../assets/img/loading_icon_page.gif" [hidden]="!isLoading">
+              <table id="grid-basic" class="table table-condensed table-hover test">
+                <thead>
+                  <tr class="tablehead" style="font-weight: bold; background-color: rgb(200, 200,200)">
+                    <td>File Name</td>
+                  </tr>
+                </thead>
+              <tbody id="tBody">
+                <tr *ngFor="let doc of listDocuments; let i = index">
+                  <!--
+                  <td *ngIf="i%2==0" style="background-color:rgb(238, 238, 238)">
+                    -->
+                    <td>
+                    <div class="row">
+                      <div class="col-sm-6" style="cursor: pointer" (click)="expand(doc.name)"><i class="fa fa-plus-square-o" id='fa{{doc.name}}' aria-hidden="true"></i>&nbsp;{{doc.name}}.json</div>
+                      <div class="col-sm-6" align="right">
+                          <button type="button" id="{{doc.name}}" data-placement="left" (click)="showPopup($event)" data-html=true data-toggle="popover" title="" data-content="">Json</button>
+                          <button (click)="confirmDelete(doc.name)">Delete</button>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <app-json-content class="subContent" id="subTable{{doc.name}}" hidden=true [data]="doc.value"></app-json-content>
+                      </div>
+                    </div>
+                  </td>
+                  <!--
+                  <td *ngIf="i%2!=0" style="background-color:rgb(250, 250, 250)">
+                      <div class="row">
+                        <div class="col-sm-6" style="cursor: pointer" (click)="expand(doc.name)"><i class="fa fa-plus-square-o" id='fa{{doc.name}}' aria-hidden="true"></i>&nbsp;{{doc.name}}.json</div>
+                        <div class="col-sm-6" align="right">
+                            <button type="button" id="{{doc.name}}" data-placement="left" (click)="showPopup($event)" data-html=true data-toggle="popover" title="" data-content="">Json</button>
+                            <button (click)="confirmDelete(doc.name)">Delete</button>
+                        </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-8">
+                            <app-json-content class="subContent" id="subTable{{doc.name}}" hidden=true [data]="doc.value"></app-json-content>
+                          </div>
+                        </div>
+                    </td>
+                    -->
+                </tr>
+              </tbody>
+              </table>
+            </div>
+      </div>     
+  </div>      
+</div>
+
+

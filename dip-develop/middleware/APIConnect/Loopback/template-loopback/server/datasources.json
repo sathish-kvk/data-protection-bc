@@ -1,0 +1,12 @@
+{
+  "dxc-dip-mysql": {
+    "host": "sl-eu-lon-2-portal.0.dblayer.com",
+    "port": 25411,
+    "url": "mysql://admin:EDYAMBRHZNAAFTKL@sl-eu-lon-2-portal.0.dblayer.com:25411/DIP",
+    "database": "DIP",
+    "password": "EDYAMBRHZNAAFTKL",
+    "name": "dxc-dip-mysql",
+    "connector": "mysql",
+    "user": "admin"
+  }
+}

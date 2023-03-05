@@ -1,0 +1,16 @@
+.uploadfile{
+    border-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 65px;
+    padding-left: 12px;
+    border-right: 1px;
+    border-right-style: solid;
+    border-right-color:blue;
+  }
+  
+  button.uploadfilebtn {
+    border-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }

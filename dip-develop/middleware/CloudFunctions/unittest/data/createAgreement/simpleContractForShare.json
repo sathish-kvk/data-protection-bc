@@ -1,0 +1,60 @@
+{
+    "agreementName": "SimpleContractDtest997",
+    "agreementId" : "",
+    "elements": [
+      {
+        "elementName": "startDate",
+        "elementType": "date",
+        "elementRules": [
+          {
+            "ruleType": "constraint",
+            "ruleText": "<VALUE> >= 01/01/2018"
+          },
+          {
+            "ruleType": "constraint",
+            "ruleText": "<VALUE> <= 31/12/2018"
+          }    
+  
+          ]
+      },
+      {
+        "elementName": "contractDays",
+        "elementType": "integer",
+        "elementRules": [
+          {
+            "ruleType": "constraint",
+            "ruleText": "<VALUE> == 7 OR <VALUE> == 30"
+          }
+        ]
+      },
+      {
+        "elementName": "endDate",
+        "elementType": "integer",
+        "elementRules": [
+          {
+            "ruleType": "Formula",
+            "ruleText": "endDate = startDate + DAYS( ./contractDays)"
+          }
+        ]
+      }
+    ],
+    "parties": [
+      {
+        "partyName": "Toyota Motor Corporation",
+        "partyID": "e6ea4437-7cce-4f80-e0f4-c3cc64089646"
+      },
+      {
+        "partyName": "tinh-party-A",
+        "partyID": "7"
+      },
+      {
+        "partyName": "tinh-party-B",
+        "partyID": "8"
+      },
+      {
+        "partyName": "tinh-party-C",
+        "partyID": "9"
+      }
+    ]
+}
+   

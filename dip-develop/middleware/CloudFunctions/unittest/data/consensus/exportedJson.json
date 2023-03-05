@@ -1,0 +1,119 @@
+{
+  "elements": [
+    {
+      "elementRules": [
+        {
+          "ruleID": "b55055f3-47af-11e8-b114-45f0641797f3",
+          "ruleType": "constraint",
+          "ruleText": "<VALUE> >= 01-May-2018"
+        },
+        {
+          "ruleID": "b55055f5-47af-11e8-b114-45f0641797f3",
+          "ruleType": "constraint",
+          "ruleText": "<VALUE> <= 31-May-2018"
+        }
+      ],
+      "elementValue": null,
+      "elementName": "startDate",
+      "elementType": "date",
+      "elementID": "b55055f1-47af-11e8-b114-45f0641797f3"
+    },
+    {
+      "elementRules": [
+        {
+          "ruleID": "b55055f8-47af-11e8-b114-45f0641797f3",
+          "ruleType": "constraint",
+          "ruleText": "<VALUE> == 6 OR <VALUE> == 12  OR <VALUE> == 60"
+        }
+      ],
+      "elementValue": null,
+      "elementName": "period",
+      "elementType": "integer",
+      "elementID": "b55055f6-47af-11e8-b114-45f0641797f3"
+    },
+    {
+      "elementRules": [
+        {
+          "ruleID": "b55055fb-47af-11e8-b114-45f0641797f3",
+          "ruleType": "formula",
+          "ruleText": "<VALUE> = startDate + MONTHS(period)"
+        }
+      ],
+      "elementValue": null,
+      "elementName": "endDate",
+      "elementType": "date",
+      "elementID": "b55055f9-47af-11e8-b114-45f0641797f3"
+    },
+    {
+      "elementRules": [],
+      "elementValue": null,
+      "elementName": "ZIPCode",
+      "elementType": "text",
+      "elementID": "b55055fc-47af-11e8-b114-45f0641797f3"
+    },
+    {
+      "elementRules": [],
+      "elementValue": null,
+      "elementName": "NumberOfSquareMetres",
+      "elementType": "numeric",
+      "elementID": "b55055fd-47af-11e8-b114-45f0641797f3"
+    },
+    {
+      "elementRules": [
+        {
+          "ruleID": "b5505600-47af-11e8-b114-45f0641797f3",
+          "ruleType": "constraint",
+          "ruleText": "<VALUE> == http://zoopla.com/propertylookupAPI  OR <VALUE> == http://valueMyOffice.com/propertylookupAPI"
+        }
+      ],
+      "elementValue": null,
+      "elementName": "SourceForPropertyValueLookup",
+      "elementType": "text",
+      "elementID": "b55055fe-47af-11e8-b114-45f0641797f3"
+    },
+    {
+      "elementRules": [],
+      "elementValue": null,
+      "elementName": "PropertyValue",
+      "elementType": "numeric",
+      "elementID": "b5505601-47af-11e8-b114-45f0641797f3"
+    },
+    {
+      "elementRules": [
+        {
+          "ruleID": "b5505604-47af-11e8-b114-45f0641797f3",
+          "ruleType": "formula",
+          "ruleText": "= PropertyValue / NumberOfSquareMetres"
+        }
+      ],
+      "elementValue": null,
+      "elementName": "BasicRent",
+      "elementType": "numeric",
+      "elementID": "b5505602-47af-11e8-b114-45f0641797f3"
+    }
+  ],
+  "parties": [
+    {
+      "partyID": "6364d5fb-45ba-4fac-ee99-a2870e06ed21",
+      "partyName": "Barnsley Landlord Services"
+    },
+    {
+      "partyID": "7dbf0837-97fb-eba78-7cd1-4f5923280ac",
+      "partyName": "Property Management PLC"
+    },
+    {
+      "partyID": "e6ea4437-7cce-4f80-e0f4-c3cc64089646",
+      "partyName": "Rigsby Landlords"
+    },
+    {
+      "partyID": "f4bf9f7f-cbed-aba03-92f1-08c59d8f4a3",
+      "partyName": "Acme Ltd"
+    }
+  ],
+  "agreementHash": "",
+  "agreementName": "Simple-CRE-Contract-24",
+  "agreementChannelID": "",
+  "agreementStatus": "Approve",
+  "agreementID": "b55055f0-47af-11e8-b114-45f0641797f3",
+  "lastProofID": ""
+}

@@ -1,0 +1,114 @@
+
+  <div class="content">
+    <h3>Proof Check</h3>
+    <div class="view">
+  
+        <div >
+          <div><p >Enter a SHA256 hash and press the "Find" button</p></div>
+          <div>
+            <div class="row">
+              <div class="col-sm-6">
+                  <input type="text" placeholder="hash" [(ngModel)]="hash" spellcheck="false">
+              </div>
+              <div class="col-sm-2"><button class="btn-block" (click)="checkHash()">Find</button></div>
+              <div class="col-sm-2"><button type="button" 
+                class="btn-block" 
+                [disabled]="!hashFound" (click)="checkInput()">
+                Validate
+              </button></div>
+            </div>
+            <table><tr>
+              <td width="70%">
+                <div >
+                  
+                </div>
+              </td>
+              <td>
+                
+                
+              </td>
+            </tr></table>
+          </div>
+          
+        </div>
+        <table><tr><td><p>{{message}}</p></td></tr></table>
+        <spinner [show]="loading"></spinner>
+        <!-- proof is an array -->
+        <div *ngIf="resultArray" >
+          <div *ngIf="hashFound" >
+        
+              <div class="tab">
+                <button style="color:black;" id="btnPretty" class="tablinks" (click)="openCity($event, 'Pretty')">Pretty</button>
+                <button style="color:black;" class="tablinks" (click)="openCity($event, 'Raw')">Raw</button>
+              </div>
+        
+        
+        
+          <div *ngFor="let proof of proofs" >
+            <div id="Pretty" class="tabcontent defaultTab" style="background-color: #f1f1f1;">
+            <div class="hash__details-datetime">
+              <div class="col-sm-3 hash__details-date"><p>Date:</p> 
+                
+                <label >{{ proof.date }}</label>
+              </div>
+              <div class="col-sm-9 hash__details-time"><p>Time:</p>
+                
+                <label>{{proof.time}}</label>
+              </div>
+            </div>
+        
+            <div class="hash__details-infor" style="padding:0px" *ngFor="let item of proof.party">
+                <div class="col-sm-3 hash__details-party">
+                  
+                  <!--<party-name value="{{item.party}}"></party-name>-->
+                  <label>{{ item.party.name }}</label>
+                </div>
+                <div class="col-sm-9 hash__details-hash" style="padding: 0px">
+                  
+                  <label style="word-break: break-word; ">{{ item.partySignature }}</label>
+                </div>
+            </div>
+          </div>
+            <div id="Raw" class="tabcontent">
+              <textarea readonly  class="form-control form-control-sm" name="textJson" id="jsonDetails" value="{{proof.proofJson}}" cols="30" rows="25">{{ data | json }}</textarea>
+              <div class="row justify-content-md-end" style=" padding-top: 10px; padding-right: 15px"><button class="btn btn-dark btn-sm" onClick="download()">Save</button></div>
+            </div>
+            
+          </div>
+          </div>
+        </div>
+        <!--end of proof is an array-->
+        
+        <!-- proof is not an array-->
+        <div *ngIf="!resultArray">
+          <div *ngIf="hashFound" class="container content-pane">
+        
+            <div class="hash__details-datetime">
+              <div class="hash__details-date"><p>Date:</p> 
+                <input class="form-control form-control-sm input" value="{{ proofDate }}">
+              </div>
+              <div class="hash__details-time"><p>Time: </p>
+                <input class="form-control form-control-sm input" value="{{ proofTime}}">
+              </div>
+            </div>
+        
+            <div class="hash__details-infor" *ngFor="let item of proofDetails.partySignatures">
+                <div class="hash__details-party">
+                  <!--<party-name value="{{ item.party }}"></party-name>-->
+                  <input class="form-control form-control-sm input" value="{{ item.party.name }}">
+                </div>
+                <div class="hash__details-hash">
+                  <input class="form-control form-control-sm input" value="{{ item.partySignature }}">
+                </div>
+            </div>
+            <div>
+              <textarea class="form-control form-control-sm" name="textJson" id="" value="{{proofFound}}" cols="30" rows="10">{{ data | json }}</textarea>
+            </div>
+          </div>
+        </div>
+
+    </div>
+</div>
+
+
+  

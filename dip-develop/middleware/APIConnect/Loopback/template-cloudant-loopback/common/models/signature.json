@@ -1,0 +1,30 @@
+{
+  "name": "signature",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "agreementID": {
+      "type": "string",
+      "required": false
+    },
+    "unsignedHash": {
+      "type": "string",
+      "required": false
+    },
+    "signedHash": {
+      "type": "string",
+      "required": false
+    },
+    "timestamp": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,17 @@
+{
+    "proofID": "526c3241-1a05-4266-b195-e6339d6d9313",
+    "proof": {
+        "agreementHash": "1143101D386C3156CE482922D8CD30975DB6AD4E9E158FC4D01B1B13FDBEEDF1",
+        "partySignatures": [
+            {
+                "party": "2938d3dc-a1d7-4d22-92b8-c884301a708f",
+                "partySignature": "2BEA936A08ABB918BC5FFCD3D69B0042236A911265C48C4FDFA35AFE032FBFF0"
+            },
+            {
+                "party": "48574d2c-3a95-466d-a442-b3b6584dbcf3",
+                "partySignature": "02F52EA89D3259188AC42F2D84B4E7C040A882CA4401E7172E5AF9458B4EE822"
+            }
+        ],
+        "createdTime": "2018-03-27T04:03:36.052Z"
+    }
+}

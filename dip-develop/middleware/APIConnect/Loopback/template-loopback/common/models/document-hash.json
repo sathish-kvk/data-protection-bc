@@ -1,0 +1,24 @@
+{
+  "name": "documentHash",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "documentContent": {
+      "type": "string",
+      "required": false
+    },
+    "documentHashID": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

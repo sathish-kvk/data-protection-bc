@@ -1,0 +1,92 @@
+<!-- <div class="check-input-container">
+  <p><em>Enter text info the source and press the Check button</em></p>
+  <label>Proof hash
+    <input type="text" name="proof-hash" id="">
+  </label>
+  <label>Source hash
+    <input type="text" name="source-hash" id="">
+    <span>green tick</span>
+  </label>
+  <label>Source
+    <textarea name="source" id="" cols="30" rows="10"></textarea>
+  </label>
+  <button>
+    Check Input
+  </button>
+</div> -->
+<div class="content">
+    <h3>Proof Check</h3>
+    <div class="view">
+        <div class="check-input-container">
+            
+            <div>
+              <table>
+                <tr>
+                  <td width="10%"><span><p>Proof hash</p></span></td>
+                  <td><input 
+                    type="text" 
+                    name="proof-hash" 
+                    id=""
+                    class="form-control form-control-sm"
+                    value="{{inputHash}}"
+                  ></td>
+                </tr>
+              </table>
+             
+              
+            </div>
+            <div>
+              <table>
+                <tr>
+                  <td width="10%"><p>Source hash</p></td>
+                  <td>
+                    <div class="row col-sm-11">
+                     
+                    <input 
+                    type="text"
+                    name="source-hash"
+                    id="" 
+                    
+                    [(ngModel)]="hashedSource"
+                    class="form-control form-control-sm col-sm-11">
+                   
+                    <span *ngIf="isMatched" class="tick"><i class="fa fa-check" style="color:green; font-size: 30px"></i></span>
+                    <span *ngIf="!isMatched" class="cross"><i class="fa fa-times" style="color:red; font-size: 30px"></i></span>
+                    
+                  </div>
+                </td>
+                </tr>
+              </table>
+              
+              
+            </div>
+            <div>
+              <textarea placeholder="Enter text info the source and press the Check button" style="margin-top: 5px; margin-bottom: 10px" class="form-control form-control-sm" name="source" id="" cols="30" rows="10" [(ngModel)]="inputSource"></textarea>
+            </div>
+            <div>
+            <table width="100%">
+              <tr><td colspan="2">
+            
+            <div class='col-sm-4' style="padding:0px">
+              <upload-file (change)="fileChangeEvent($event)"></upload-file>
+            </div>
+          
+            </td></tr>
+            <tr><td width="15%">
+            <button class="btn-block" [disabled]="!inputSource" (click)="checkInput(source)">
+              Check Input
+            </button>
+            </td>
+            <td width="70%"></td>
+            <td width="15%" align="right">
+                <button class="btn-block" (click)="goBack()">
+                    Back
+                </button>
+                </td></tr></table>
+            </div> 
+            
+          </div>
+    </div>
+</div>
+
+

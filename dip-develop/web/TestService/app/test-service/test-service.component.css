@@ -1,0 +1,30 @@
+
+
+
+input {
+  margin-bottom: 0px;
+  margin-left: 0mm;
+}
+
+.hash__input {
+  width: 60%;
+}
+
+.hash__details-datetime,
+.hash__details-infor {
+  display: flex;
+  width: 100%;
+}
+
+.hash__details-party, .hash__details-date {
+  margin-right: 20px;
+  flex-basis: 30%;
+}
+
+.hash__details-hash, .hash__details-time {
+  flex-basis: 70%;
+}
+
+message {
+  align-self: initial;
+}

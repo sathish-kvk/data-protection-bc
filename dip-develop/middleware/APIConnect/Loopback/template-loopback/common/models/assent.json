@@ -1,0 +1,28 @@
+{
+  "name": "assent",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fk_proofID": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "fk_partyID": {
+      "type": "string",
+      "required": false
+    },
+    "assent_signedHash": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,50 @@
+{
+  "name": "element",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "elementID": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "elementName": {
+      "type": "string",
+      "required": false
+    },
+    "elementType": {
+      "type": "string",
+      "required": false
+    },
+    "elementValue": {
+      "type": "string",
+      "required": false
+    },
+    "element_parent_elementID": {
+      "type": "string",
+      "required": false
+    },
+    "fk_agreementID": {
+      "type": "string",
+      "required": true
+    },
+    "writeOne": {
+      "type": "boolean",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "elementRules": {
+      "type": "hasMany",
+      "model": "rule",
+      "foreignKey": "fk_ElementID"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

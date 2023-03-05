@@ -1,0 +1,32 @@
+{
+  "name": "rule",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ruleID": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "ruleType": {
+      "type": "string",
+      "required": false
+    },
+    "ruleText": {
+      "type": "string",
+      "required": false
+    },
+    "fk_ElementID": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

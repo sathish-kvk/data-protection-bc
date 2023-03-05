@@ -1,0 +1,52 @@
+{
+    "agreementName": "SimpleContract1012",
+    "agreementID" : "",
+    "elements": [
+      {
+        "elementName": "startDate",
+        "elementType": "date",
+        "elementRules": [
+          {
+            "ruleType": "constraint1",
+            "ruleText": "<VALUE> >= 01/01/2018"
+          },
+          {
+            "ruleType": "constraint",
+            "ruleText": "<VALUE> <= 31/12/2018"
+          }    
+  
+          ]
+      },
+      {
+        "elementName": "contractDays",
+        "elementType": "integer",
+        "elementRules": [
+          {
+            "ruleType": "constraint2",
+            "ruleText": "<VALUE> == 7 OR <VALUE> == 30"
+          }
+        ]
+      },
+      {
+        "elementName": "endDate",
+        "elementType": "integer",
+        "elementRules": [
+          {
+            "ruleType": "Formula",
+            "ruleText": "endDate = startDate + DAYS( ./contractDays)"
+          }
+        ]
+      }
+    ],
+    "parties": [
+      {
+        "partyName": "Toyota Motor Corporation",
+        "partyID": "e6ea4437-7cce-4f80-e0f4-c3cc64089646"
+      },
+      {
+        "partyName": "Fuel Total Systems Corp",
+        "partyID": "6364d5fb-45ba-4fac-ee99-a2870e06ed21"
+      }
+    ]
+}
+   

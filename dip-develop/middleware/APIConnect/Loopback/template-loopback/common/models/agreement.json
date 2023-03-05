@@ -1,0 +1,52 @@
+{
+  "name": "agreement",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "agreementID": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "agreementName": {
+      "type": "string",
+      "required": false
+    },
+    "agreementStatus": {
+      "type": "string",
+      "required": false
+    },
+    "agreementHash": {
+      "type": "string",
+      "required": false
+    },
+    "agreementChannelID": {
+      "type": "string",
+      "required": false
+    },
+    "lastProofID": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "elements": {
+      "type": "hasMany",
+      "model": "element",
+      "foreignKey": "fk_agreementID"
+    },
+    "parties": {
+      "type": "hasMany",
+      "model": "party",
+      "foreignKey": "agreement_agreementID",
+      "through": "agreement_has_party",
+      "keyThrough": "party_partyID"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,46 @@
+
+<div class="content">
+  <app-pagename pageName="Export" export="active" partyName="{{loginParty}}"></app-pagename>
+  <div class="view">
+    
+      <div class="row"> 
+        <div class="col-sm-6">
+          <div class="text_field"><textarea readonly [(ngModel)]="exportJson" id="outputJson"></textarea></div>
+          <button style="width: 100px" (click)="downloadAgreement(agreementName)">Download</button>
+        </div>
+        <div class="col-sm-6">
+          <div class="row" style=" padding-top:7px">
+            <div class="col-sm-9">
+                <input type="text" [(ngModel)]="agreementId" tabindex="1" placeholder="Agreement ID" >
+            </div>
+            <div class="col-sm-3">
+                <button class="btn-block"  [disabled]="!agreementId" (click)="exportAgreement()">Export</button>
+                
+              </div>
+          </div>
+          <hr>
+              <div class="row" style=" height: 480px; overflow-y: scroll; font-size: 12px; padding-right: 20px">
+                <div class="col-sm-12">
+                  <table width="100%">
+                  
+                      <tr *ngFor="let party of elementsInContract" class="shadow-sm p-3 mb-5 bg-white rounded">
+                        <td>
+                          <app-element-download-doc 
+                          [elementName]="party.elementName" 
+                          [elementValue]="party.elementValue"
+                          [docName]="getDocumentName(party.elementID)"
+                          [elementID]="party.elementID"
+                          [agreementID]="agreementId">
+                          </app-element-download-doc>
+                        </td>
+                      </tr>
+                    </table> 
+                  </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  
+</div>
+

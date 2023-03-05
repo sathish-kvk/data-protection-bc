@@ -1,0 +1,28 @@
+{
+  "name": "tableHash",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "value": {
+      "type": "object",
+      "required": false
+    },
+    "timestamp": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,67 @@
+table, input {
+  width: 100%;
+}
+
+input {
+  margin-bottom: -2px;
+  margin-left: 0mm;
+}
+
+.content-element {
+  margin-bottom: 1px;
+}
+
+.content-pane {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: rgb(245, 245, 245);
+  border-spacing: 10px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 0px;
+  border-top-width: 5px;
+  border-bottom-style: double;
+  border-color: rgb(182, 182, 182);
+}
+
+p {
+  color: black;
+}
+
+.hash__input {
+  width: 60%;
+}
+
+.hash__details-datetime,
+.hash__details-infor {
+  display: flex;
+  width: 100%;
+  
+}
+.input {
+  margin-bottom: 0px;
+}
+
+.hash__details-party, .hash__details-date {
+  margin-right: 20px;
+  flex-basis: 30%;
+}
+
+.hash__details-hash, .hash__details-time {
+  flex-basis: 70%;
+}
+
+message {
+  align-self: initial;
+}
+
+.tick:before {
+  symbols: 2714;
+  color: green;
+  border-spacing: 0ch;
+}
+
+.cross:before {
+  symbols: 2716;
+  color: red;
+  
+}

@@ -1,0 +1,11 @@
+{
+  "cloudant-datasource": {
+    "url": "https://5d04fdb5-6f46-4e0a-a219-92a8523a9f70-bluemix:ac1104af38d7850ab15027bebf7df5c7f79fd8e2ade42676d2cedeb213fa5c04@5d04fdb5-6f46-4e0a-a219-92a8523a9f70-bluemix.cloudant.com",
+    "database": "dip",
+    "username": "5d04fdb5-6f46-4e0a-a219-92a8523a9f70-bluemix",
+    "password": "ac1104af38d7850ab15027bebf7df5c7f79fd8e2ade42676d2cedeb213fa5c04",
+    "name": "cloudant-datasource",
+    "connector": "cloudant",
+    "modelIndex": "loopback_model_name"
+  }
+}

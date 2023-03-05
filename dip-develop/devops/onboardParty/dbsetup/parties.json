@@ -1,0 +1,162 @@
+{
+  "Rigsby Landlords": {
+    "userType": "Broker",
+    "database": {
+      "name": "compose-for-mysql",
+      "plan": "Standard"
+    },
+    "uuid": "e6ea4437-7cce-4f80-e0f4-c3cc64089646"
+  },
+  "Barnsley Landlord Services": {
+    "userType": "Broker",
+    "database": {
+      "name": "compose-for-mysql",
+      "plan": "Standard"
+    },
+    "uuid": "6364d5fb-45ba-4fac-ee99-a2870e06ed21"
+  },
+ "Acme Ltd": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "f4bf9f7f-cbed-aba03-92f1-08c59d8f4a3"
+  },
+ "Property Management PLC": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "7dbf0837-97fb-eba78-7cd1-4f5923280ac"
+  },
+ "TestLandlord": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "d28f57cb-f270-4f6f-adee-f3b14a90ffde"
+  },
+ "TestLandlordAgent": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "361374d1-ba46-4704-aa97-946ff22a74fe"
+  },
+  "TestTenant": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "d8eb724e-4437-4bb0-968b-b65dfac61f1a"
+  },
+  "TestPropertyManager": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "1f90e69a-0216-470e-b122-ed8f989b8638"
+  },
+  "Jackie Underwriters": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "aded752d-e588-4bf8-94ab-9650005a2745"
+  },
+  "Jermaine Claims Management": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "1e1bb6ed-cc80-4cae-9803-83c0a811c2ec"
+  },
+  "Marlon Brokers": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "935f6b5e-8196-4ff3-9a80-c3a64092547e"
+  },
+  "MJ Insurance Services": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "d0bf704f-7920-468a-820b-b999ea29f59e"
+  },
+  "Tito Managing Agency": {
+	"userType": "Broker",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "e103cd3f-2c15-461e-8492-2b37f1bb6d12"
+  },
+  "Stagecoach": {
+	"userType": "BusOperator",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "2f37d63a-9421-4a5e-bdf3-12f36ae601c7"
+  },
+  "MerseyLink": {
+	"userType": "TrainOperator",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "50418a6e-e569-4260-aaef-83db016eb764"
+  },
+  "TransPennine": {
+	"userType": "TrainOperator",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "dc50d6a9-8de3-41a8-ab04-a5b72b5e8950"
+  },
+  "ABBOTT": {
+	"userType": "Regulator",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "485921cc-46c6-4f7c-82ac-bc587e9901b2"
+  },
+  "LENNON": {
+	"userType": "Ticketing",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "e11f52a9-0f55-4294-b2b2-501b3e04581e"
+  },
+  "DXC Technology": {
+	"userType": "Supplier",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "fcc5c2f9-1be2-4e4e-a4d4-fa2bafb03746"
+  },
+  "Commonwealth Bank of Australia": {
+	"userType": "Procurer",
+	"database": {
+	  "name": "compose-for-mysql",
+	  "plan": "Standard"
+	},
+	"uuid": "0a84d56a-a372-4c57-87ef-7e170ecec4e9"
+  }
+}

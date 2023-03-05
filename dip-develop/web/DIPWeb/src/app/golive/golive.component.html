@@ -1,0 +1,63 @@
+<div class="content">
+  <app-pagename pageName="GoLive" golive="active" partyName="{{spaceName}}"></app-pagename>
+    <div class="view">
+        <div class="row">
+            <div class="col-sm-6" [hidden]="!lastPartyApprove">
+                <img src="../../assets/img/loading_icon_page.gif">
+            </div>
+          <div class="col-sm-6" style="padding-top: 8px" [hidden]="lastPartyApprove">
+              <textarea readonly  cols="80" rows="28" [(ngModel)]="exportJson"></textarea>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-9">
+                <div class="row">
+                    <input placeholder="Agreement ID" (keyup)="onTypeAgreementID()" type="text" class="form-control form-control-sm" [(ngModel)]="agreementId" width="100%">
+                </div>
+                <div class="row" >
+                    <select  (change)="clearJsonView()" id="selContracts"  [(ngModel)]="selAgreementID"  >
+                        <option *ngFor="let space of listOfContracts"  value="{{space.agreementID}}" text="{{space.agreementName}}">
+                          {{space.agreementName}}
+                        </option>
+                    </select>
+                </div>
+              </div>
+              <div class="col-sm-3" style="padding-bottom: 15px">
+                <div class="row" style="padding-right: 15px">
+                  <button class="btn-block"  [disabled]=" isLoading" (click)="exportAgreement()">Load</button>
+                </div>
+                <div class="row" style="padding-right: 15px">
+                  <button id="btnApprove"  [disabled]="currentAgreementStatus !='Negotiate'" (click)="approveAgreement()"   class="btn-block">Approve</button>
+                   
+                </div>
+              </div>
+            </div>
+
+            <div class="row" style="padding-right: 15px">
+              <div class="col-sm-12" style="padding: 15px; height: 460px; overflow-y: scroll; background-color: rgb(245, 245, 245)">
+                  <table width="100%" *ngIf="partiesStatus.length>0" style="border-width: 1px; background-color: white " class='table table-condensed table-hover'>
+                      <thead><tr style="font-weight: bold">
+                        <td>Party</td><td align="center">Status</td>
+                      </tr></thead>
+                      <tr *ngFor="let party of partiesStatus" style="font-size: 14px">
+                        <td>{{party.partyName}}</td>
+                        <td align="center" >
+                            <i *ngIf="party.partyStatus!='Approve' && party.partyStatus != 'Live'" class="fa fa-question-circle" style="color:red"></i>
+                            <i *ngIf="party.partyStatus=='Approve' || party.partyStatus=='Live'" class="fa fa-check-circle" style="color:green"></i>
+                        </td>
+                      </tr>
+                  </table>
+                  <span *ngIf="partiesStatus.length==0 && !isLoadingStatus">There is no party in this agreement</span>
+                  
+                  <img *ngIf="isLoadingStatus" src="../../assets/img/loading_icon_sm.gif">
+              </div>
+              
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+  
+

@@ -1,0 +1,74 @@
+{
+	"trigger4deleteAgreement":{
+		"actions":[
+			{   
+				"name" : "removeAgreement",
+				"action": "common-ow/removeAgreement"
+			}
+		]
+	},
+	"trigger-4-create-agreement-in-multiple-party-system":{
+		"actions":[
+			{   
+				"name" : "create-agreement-in-multiple-party-system",
+				"action": "common-ow/create-agreement-in-multiple-party-system"
+			}
+		]
+	},
+	"trigger-4-proof-all-parties":{
+		"actions":[
+			{   
+				"name" : "proof-4-all-parties",
+				"action": "common-ow/proof-4-all-parties"
+			}
+		]
+	},
+	"trigger-4-update-status-all-parties":{
+		"actions":[
+			{   
+				"name" : "updateAgreementStatus-4-all-parties",
+				"action": "common-ow/updateAgreementStatus-4-all-parties"
+			}
+		]
+	},
+	"trigger-4-update-status":{
+		"actions":[
+			{   
+				"name" : "updateAgreementStatus",
+				"action": "common-ow/updateAgreementStatus"
+			}
+		]
+	},
+	"trigger-4-update-multiple-parties":{
+		"actions":[
+			{   
+				"name" : "update-multiple-parties",
+				"action": "common-ow/update-multiple-parties"
+			}
+		]
+	},
+	"trigger-4-write-to-cloudant-in-export":{
+		"actions":[
+			{   
+				"name" : "exportAgreement-writeAgreementToCloudant",
+				"action": "common-ow/exportAgreement-writeAgreementToCloudant"
+			}
+		]
+	},
+	"trigger-4-go-live-all-parties":{
+		"actions":[
+			{   
+				"name" : "go-live-all-parties",
+				"action": "common-ow/go-live-all-parties"
+			}
+		]
+	},
+	"trigger-4-add-document-multiple-parties":{
+		"actions":[
+			{   
+				"name" : "add-document-multiple-parties",
+				"action": "common-ow/add-document-multiple-parties"
+			}
+		]
+	}
+}

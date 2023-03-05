@@ -1,0 +1,119 @@
+{
+    "elements": [
+        {
+            "elementRules": [
+                {
+                    "ruleID": "8672f353-4903-11e8-bf78-3358c9c5a5a0",
+                    "ruleType": "constraint",
+                    "ruleText": "<VALUE> >= 01-May-2018"
+                },
+                {
+                    "ruleID": "8672f355-4903-11e8-bf78-3358c9c5a5a0",
+                    "ruleType": "constraint",
+                    "ruleText": "<VALUE> <= 31-May-2018"
+                }
+            ],
+            "elementValue": null,
+            "elementName": "startDate",
+            "elementType": "date",
+            "elementID": "8672f351-4903-11e8-bf78-3358c9c5a5a0"
+        },
+        {
+            "elementRules": [
+                {
+                    "ruleID": "8672f358-4903-11e8-bf78-3358c9c5a5a0",
+                    "ruleType": "constraint",
+                    "ruleText": "<VALUE> == 6 OR <VALUE> == 12  OR <VALUE> == 60"
+                }
+            ],
+            "elementValue": null,
+            "elementName": "period",
+            "elementType": "integer",
+            "elementID": "8672f356-4903-11e8-bf78-3358c9c5a5a0"
+        },
+        {
+            "elementRules": [
+                {
+                    "ruleID": "8672f35b-4903-11e8-bf78-3358c9c5a5a0",
+                    "ruleType": "formula",
+                    "ruleText": "<VALUE> = startDate + MONTHS(period)"
+                }
+            ],
+            "elementValue": null,
+            "elementName": "endDate",
+            "elementType": "date",
+            "elementID": "8672f359-4903-11e8-bf78-3358c9c5a5a0"
+        },
+        {
+            "elementRules": [],
+            "elementValue": null,
+            "elementName": "ZIPCode",
+            "elementType": "text",
+            "elementID": "86731a60-4903-11e8-bf78-3358c9c5a5a0"
+        },
+        {
+            "elementRules": [],
+            "elementValue": null,
+            "elementName": "NumberOfSquareMetres",
+            "elementType": "numeric",
+            "elementID": "86731a61-4903-11e8-bf78-3358c9c5a5a0"
+        },
+        {
+            "elementRules": [
+                {
+                    "ruleID": "86731a64-4903-11e8-bf78-3358c9c5a5a0",
+                    "ruleType": "constraint",
+                    "ruleText": "<VALUE> == http://zoopla.com/propertylookupAPI  OR <VALUE> == http://valueMyOffice.com/propertylookupAPI"
+                }
+            ],
+            "elementValue": null,
+            "elementName": "SourceForPropertyValueLookup",
+            "elementType": "text",
+            "elementID": "86731a62-4903-11e8-bf78-3358c9c5a5a0"
+        },
+        {
+            "elementRules": [],
+            "elementValue": null,
+            "elementName": "PropertyValue",
+            "elementType": "numeric",
+            "elementID": "86731a65-4903-11e8-bf78-3358c9c5a5a0"
+        },
+        {
+            "elementRules": [
+                {
+                    "ruleID": "86731a68-4903-11e8-bf78-3358c9c5a5a0",
+                    "ruleType": "formula",
+                    "ruleText": "= PropertyValue / NumberOfSquareMetres"
+                }
+            ],
+            "elementValue": null,
+            "elementName": "BasicRent",
+            "elementType": "numeric",
+            "elementID": "86731a66-4903-11e8-bf78-3358c9c5a5a0"
+        }
+    ],
+    "parties": [
+        {
+            "partyID": "6364d5fb-45ba-4fac-ee99-a2870e06ed21",
+            "partyName": "Barnsley Landlord Services"
+        },
+        {
+            "partyID": "7dbf0837-97fb-eba78-7cd1-4f5923280ac",
+            "partyName": "Property Management PLC"
+        },
+        {
+            "partyID": "e6ea4437-7cce-4f80-e0f4-c3cc64089646",
+            "partyName": "Rigsby Landlords"
+        },
+        {
+            "partyID": "f4bf9f7f-cbed-aba03-92f1-08c59d8f4a3",
+            "partyName": "Acme Ltd"
+        }
+    ],
+    "agreementHash": "",
+    "agreementName": "Simple-CRE-Contract-29",
+    "agreementChannelID": "",
+    "agreementStatus": "Negotiate",
+    "agreementID": "8672f350-4903-11e8-bf78-3358c9c5a5a0",
+    "lastProofID": ""
+}

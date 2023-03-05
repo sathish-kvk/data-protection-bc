@@ -1,0 +1,5 @@
+---
+applications:
+ - name: proofchecker
+   routs: http://proofchecker.eu-gb.mybluemix.net
+   memory: 256M

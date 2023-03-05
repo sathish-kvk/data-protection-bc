@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Service</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script type="text/javascript" src="./app/shared/assets/js/popper.min.js"></script>
+    <script src="systemjs.config.js"></script>
+    
+    <script>
+      System.import ('built/app/main')
+        .then(null, console.error.bind(console));
+    </script>
+    <!--
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    -->
+    <base href="/">
+    
+    <!-- Include Twitter Bootstrap and jQuery: -->
+    <link rel="stylesheet" href="./app/shared/assets/css/bootstrap.min.css" type="text/css"/>
+    <script type="text/javascript" src="./app/shared/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./app/shared/assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    
+    
+    <!-- Include the plugin's CSS and JS: -->
+    <script type="text/javascript" src="./app/shared/assets/js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="./app/shared/assets/css/bootstrap-multiselect.css" type="text/css"/>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-red.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+  </head>
+  <body>
+      
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+            <div class="bg">
+                <div id="triangle-down"></div>
+                <img src="app/shared/assets/img/dxc_logo_hz_wht_rgb_150.png" alt="logo">
+            </div>
+        </div>
+        <div class="app_name"><label>dip</label></div>
+    </div>
+    </div>
+    <div class="container">
+    <proofcheck-app>Loading...</proofcheck-app>
+    </div>
+    
+    <script>
+      function download(){
+          var text = document.getElementById("outputJson").value;
+          text = text.replace(/\n/g, "\r\n");
+          var blob = new Blob([text], { type: "text/plain"});
+          var anchor = document.createElement("a");
+          anchor.download = "responded.json";
+          anchor.href = window.URL.createObjectURL(blob);
+          anchor.target ="_blank";
+          anchor.style.display = "none"; // just to be safe!
+          document.body.appendChild(anchor);
+          anchor.click();
+          document.body.removeChild(anchor);
+       }
+    </script>
+    
+  </body>
+
+</html>

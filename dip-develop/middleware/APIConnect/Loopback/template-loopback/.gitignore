@@ -1,0 +1,5 @@
+/.project
+node_modules
+.apiconnect
+.targets
+.vscode

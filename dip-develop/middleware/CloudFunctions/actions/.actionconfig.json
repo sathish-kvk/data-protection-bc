@@ -1,0 +1,390 @@
+{
+	"addAgreement":{
+		"package": "common-ow",
+		"file": "addAgreement.js"
+	},
+	"addElement":{
+		"package":"common-ow",
+		"file": "addElement.js"
+	},
+	"addElements":{
+		"package":"common-ow",
+		"file": "addElements.js"
+	},
+	"addPartiesToAgreement":{
+		"package":"common-ow",
+		"file": "addPartiesToAgreement.js"
+	},
+	"addPartyToAgreement":{
+		"package":"common-ow",
+		"file": "addPartyToAgreement.js"
+	},
+	"addRule":{
+		"package":"common-ow",
+		"file": "addRule.js"
+	},
+	"addRules":{
+		"package":"common-ow",
+		"file": "addRules.js"
+	},
+	"apiAgreement":{
+		"package":"common-ow",
+		"file": "apiAgreement.js"
+	},
+	"apiRule":{
+		"package":"common-ow",
+		"file": "apiRule.js"
+	},
+	"createAgreement":{
+		"package":"common-ow",
+		"file": "createAgreement.js"
+	},
+	"create-agreement-in-multiple-party-system":{
+		"package":"common-ow",
+		"file": "create-agreement-in-multiple-party-system.js"
+	},
+	"createAgreementInSinglePartySystem":{
+		"package":"common-ow",
+		"file": "createAgreementInSinglePartySystem.js"
+	},
+	"deleteAgreement":{
+		"package":"common-ow",
+		"file": "deleteAgreement.js"
+	},
+	"deleteElement":{
+		"package":"common-ow",
+		"file": "deleteElement.js"
+	},
+	"deleteElements":{
+		"package":"common-ow",
+		"file": "deleteElements.js"
+	},
+	"deletePartiesAgreement":{
+		"package":"common-ow",
+		"file": "deletePartiesAgreement.js"
+	},
+	"deleteRule":{
+		"package":"common-ow",
+		"file": "deleteRule.js"
+	},
+	"deleteRules":{
+		"package":"common-ow",
+		"file": "deleteRules.js"
+	},
+	"evaluate":{
+		"package":"common-ow",
+		"file": "evaluate.js"
+	},
+	"exportAgreement":{
+		"package":"common-ow",
+		"file": "exportAgreement.zip"
+	},
+	"findProof":{
+		"package":"common-ow",
+		"file": "findProof.js"
+	},
+	"formatJson4MasterTables":{
+		"package":"common-ow",
+		"file": "formatJson4MasterTables.js"
+	},
+	"getAgreement":{
+		"package":"common-ow",
+		"file": "getAgreement.js"
+	},
+	"getAgreementAndDescendants":{
+		"package":"common-ow",
+		"file": "getAgreementAndDescendants.js"
+	},
+	"getElementsOfAgreement":{
+		"package":"common-ow",
+		"file": "getElementsOfAgreement.js"
+	},
+	"getNewestAgreementInCloudant":{
+		"package":"common-ow",
+		"file": "getNewestAgreementInCloudant.js"
+	},
+	"getPartiesByAgreement":{
+		"package":"common-ow",
+		"file": "getPartiesByAgreement.js"
+	},
+	"getPartyByName":{
+		"package":"common-ow",
+		"file": "getPartyByName.js"
+	},
+	"insertAgreementHasParty":{
+		"package":"common-ow",
+		"file": "insertAgreementHasParty.js"
+	},
+	"insertElement":{
+		"package":"common-ow",
+		"file": "insertElement.js"
+	},
+	"postProof":{
+		"package":"common-ow",
+		"file": "postProof.js"
+	},
+	"prepare-JSON-4-All-System":{
+		"package":"common-ow",
+		"file": "prepare-JSON-4-All-System.js"
+	},
+	"prepare-JSON-4-Individual-System":{
+		"package":"common-ow",
+		"file": "prepare-JSON-4-Individual-System.js"
+	},
+	"removeAgreement":{
+		"package": "common-ow",
+		"file": "removeAgreement.js"
+	},
+	"shareAgreement":{
+		"package":"common-ow",
+		"file": "shareAgreement.js"
+	},
+	"substitue":{
+		"package":"common-ow",
+		"file": "substitue.js"
+	},
+	"validate":{
+		"package":"common-ow",
+		"file": "validate.js"
+	},
+	"writeAgreementToCloudant":{
+		"package":"common-ow",
+		"file": "writeAgreementToCloudant.js"
+	},
+	"getAgreementStatus":{
+		"package":"common-ow",
+		"file": "getAgreementStatus.js"
+	},
+	"goLive":{
+		"package":"common-ow",
+		"file": "goLive.js"
+	},
+	"updateAgreementStatus":{
+		"package":"common-ow",
+		"file": "updateAgreementStatus.js"
+	},
+	"approve":{
+		"package":"common-ow",
+		"file": "approve.js"
+	},
+	"propose":{
+		"package":"common-ow",
+		"file": "propose.js"
+	},
+	"getSignedHash":{
+		"package":"common-ow",
+		"file": "getSignedHash.js"
+	},
+	"sign":{
+		"package":"common-ow",
+		"file": "sign.js"
+	},
+	"insertSignature":{
+		"package":"common-ow",
+		"file": "insertSignature.js"
+	},
+	"writeAgreement":{
+		"package":"common-ow",
+		"file": "writeAgreement.js"
+	},
+	"updateRules":{
+		"package":"common-ow",
+		"file": "updateRules.js"
+	},
+	"updateRule":{
+		"package":"common-ow",
+		"file": "updateRule.js"
+	},
+	"updateElements":{
+		"package":"common-ow",
+		"file": "updateElements.js"
+	},
+	"updateElement":{
+		"package":"common-ow",
+		"file": "updateElement.js"
+	},
+	"updateAgreement":{
+		"package":"common-ow",
+		"file": "updateAgreement.js"
+	},
+	"formatJson4MasterTablesForUpdate":{
+		"package":"common-ow",
+		"file": "formatJson4MasterTablesForUpdate.js"
+	},
+	"compareHash":{
+		"package":"common-ow",
+		"file": "compareHash.js"
+	},
+	"getLatestHashInCloudant":{
+		"package":"common-ow",
+		"file": "getLatestHashInCloudant.js"
+	},
+	"createHash":{
+		"package":"common-ow",
+		"file": "createHash.zip"
+	},
+	"createHashFromJson":{
+		"package":"common-ow",
+		"file": "createHashFromJson.js"
+	},
+	"postHashToCloudant":{
+		"package":"common-ow",
+		"file": "postHashToCloudant.js"
+	},
+	"compare-hash-in-multiple-party-system":{
+		"package":"common-ow",
+		"file": "compare-hash-in-multiple-party-system.js"
+	},
+	"storeJSONToCloudant":{
+		"package":"common-ow",
+		"file": "storeJSONToCloudant.js"
+	},
+	"consensus":{
+		"package":"common-ow",
+		"file": "consensus.js"
+	},
+	"proof":{
+		"package":"common-ow",
+		"file": "proof.js"
+	},
+	"insertAssent":{
+		"package":"common-ow",
+		"file": "insertAssent.js"
+	},
+	"insertProof":{
+		"package":"common-ow",
+		"file": "insertProof.js"
+	},
+	"publishProof":{
+		"package":"common-ow",
+		"file": "publishProof.js"
+	},
+	"recordTxnID":{
+		"package":"common-ow",
+		"file": "recordTxnID.js"
+	},
+  	"insertParty":{
+		"package":"common-ow",
+		"file": "insertParty.js"
+	},
+	"extend":{
+		"package":"common-ow",
+		"file": "extend.js"
+	},
+	"deleteAgreementHasParties":{
+		"package":"common-ow",
+		"file": "deleteAgreementHasParties.js"
+	},
+	"deleteAgreementHasParty":{
+		"package":"common-ow",
+		"file": "deleteAgreementHasParty.js"
+	},
+	"checkExistElement":{
+		"package":"common-ow",
+		"file": "checkExistElement.js"
+	},
+	"checkExistParty":{
+		"package":"common-ow",
+		"file": "checkExistParty.js"
+	},
+	"checkExistAgreement":{
+		"package":"common-ow",
+		"file": "checkExistAgreement.js"
+	},
+	"negotiate":{
+		"package":"common-ow",
+		"file": "negotiate.js"
+	},
+	"proof-4-all-parties":{
+		"package":"common-ow",
+		"file": "proof-4-all-parties.js"
+	},
+	"updateAgreementStatus-4-all-parties":{
+		"package":"common-ow",
+		"file": "updateAgreementStatus-4-all-parties.js"
+	},
+	"update-multiple-parties":{
+		"package":"common-ow",
+		"file": "update-multiple-parties.js"
+	},
+	"update":{
+		"package":"common-ow",
+		"file": "update.js"
+	},
+	"getParties":{
+		"package":"common-ow",
+		"file": "getParties.js"
+	},
+	"exportAgreement-writeAgreementToCloudant":{
+		"package":"common-ow",
+		"file": "exportAgreement-writeAgreementToCloudant.js"
+	},
+	"go-live-all-parties":{
+		"package":"common-ow",
+		"file": "go-live-all-parties.js"
+	},
+	"getUnapprovedAgreements":{
+		"package":"common-ow",
+		"file": "getUnapprovedAgreements.js"
+	},
+	"addDocument":{
+		"package":"common-ow",
+		"file": "addDocument.js"
+	},
+	"insertDocument":{
+		"package":"common-ow",
+		"file": "insertDocument.js"
+	},
+	"getDocument":{
+		"package":"common-ow",
+		"file": "getDocument.js"
+	},
+	"downloadDocument":{
+		"package":"common-ow",
+		"file": "downloadDocument.js"
+	},
+	"getDocumentsInAgreement":{
+		"package":"common-ow",
+		"file": "getDocumentsInAgreement.js"
+	},
+	"addTableHash":{
+		"package":"common-ow",
+		"file": "addTableHash.js"
+	},
+	"getTableHashes":{
+		"package":"common-ow",
+		"file": "getTableHashes.js"
+	},
+	"deleteTableHash":{
+		"package":"common-ow",
+		"file": "deleteTableHash.js"
+	},
+  "checkExistingTableHashElement":{
+		"package":"common-ow",
+		"file": "checkExistingTableHashElement.js"
+	},
+	"getLookupTable4Elements":{
+		"package":"common-ow",
+		"file": "getLookupTable4Elements.js"
+	},
+	"add-document-multiple-parties":{
+		"package":"common-ow",
+		"file": "add-document-multiple-parties.js"
+   },
+   "checkExistingLookupTable-4-all-parties":{
+	   "package":"common-ow",
+	   "file": "checkExistingLookupTable-4-all-parties.js"
+   },
+   "insertDocumentHash":{
+	   "package":"common-ow",
+	   "file": "insertDocumentHash.js"
+   },
+   "getAgreementStatus4Parties":{
+	   "package":"common-ow",
+	   "file": "getAgreementStatus4Parties.js"
+   },
+   "checkExistingReferenceElement":{
+	   "package":"common-ow",
+	   "file": "checkExistingReferenceElement.js"
+   }
+}

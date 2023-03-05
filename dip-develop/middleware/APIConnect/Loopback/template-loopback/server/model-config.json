@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "agreement": {
+    "dataSource": "dxc-dip-mysql",
+    "public": true
+  },
+  "party": {
+    "dataSource": "dxc-dip-mysql",
+    "public": true
+  },
+  "element": {
+    "dataSource": "dxc-dip-mysql",
+    "public": true
+  },
+  "agreement_has_party": {
+    "dataSource": "dxc-dip-mysql",
+    "public": true
+  },
+  "rule": {
+    "dataSource": "dxc-dip-mysql",
+    "public": true
+  },
+  "proof": {
+    "dataSource": "dxc-dip-mysql",
+    "public": true
+  },
+  "assent": {
+    "dataSource": "dxc-dip-mysql",
+    "public": true
+  },
+  "document": {
+    "dataSource": "dxc-dip-mysql",
+    "public": true
+  },
+  "documentHash": {
+    "dataSource": "dxc-dip-mysql",
+    "public": true,
+    "strict": false
+  }
+}

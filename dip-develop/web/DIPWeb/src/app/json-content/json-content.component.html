@@ -1,0 +1,8 @@
+<table  style='font-size: 12px; margin-bottom: 0px' class='table table-condensed'>
+  <tr *ngFor="let doc of listContents; let i = index">
+    <td *ngFor="let element of doc">
+      <span *ngIf="i==0" style="font-weight: bold">{{element}}</span>
+      <span *ngIf="i!=0">{{element}}</span>
+    </td>
+  </tr>
+</table>

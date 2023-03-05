@@ -1,0 +1,9 @@
+{
+  "name": "exportAgreement",
+  "version": "1.0.0",
+  "main": "exportAgreement.js",
+  "dependencies": {
+    "object-hash": "*",
+    "key-del": "*"
+  }
+}

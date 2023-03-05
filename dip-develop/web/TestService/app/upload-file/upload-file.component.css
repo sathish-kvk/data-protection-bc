@@ -1,0 +1,30 @@
+.check-input-container {
+ display: flex;
+ align-content: center;
+ flex-direction: column;
+ background-color: gray;
+}
+
+table, textarea {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
+
+.tick:before {
+
+  color: green;
+  border-spacing: 0ch;
+}
+
+.cross:before {
+
+  color: red;
+}
+
+.source-hash,
+.proof-hash {
+  width: 80%;
+}

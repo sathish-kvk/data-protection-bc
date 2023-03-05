@@ -1,0 +1,10 @@
+---
+applications:
+- name: {{.Spacename -}} -admin
+  memory: 128M
+  no-hostname: true
+  no-route: true
+  services:
+  - {{.Spacename -}} -apiconnect
+  - {{.Spacename -}} -cloudant
+  {{if .UserConfig.Database }}- {{.Spacename}}-{{ .UserConfig.Database.Name }}{{end}}

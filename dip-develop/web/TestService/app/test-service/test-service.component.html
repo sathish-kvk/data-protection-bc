@@ -1,0 +1,119 @@
+<modal-confirm></modal-confirm>
+
+<!--Show Details-->
+<div class="container content-pane" >
+<div><h5>{{innovationName}}/api/{{actionName}}</h5></div>
+<div class="form-row">
+  
+  <div class="form-group col-sm-6 ">
+    <p class="content-element">{{jsFileName}}.js</p>
+    <textarea readonly class="form-control form-control-sm " [(ngModel)]="actionJs" cols="60" rows="6"></textarea>
+  </div>
+  <div class="form-group col-sm-6 ">
+    <p class="content-element">actionConfig.json</p>
+    <textarea readonly class="form-control form-control-sm " [(ngModel)]="actionConfigJson"  cols="60" rows="6"></textarea>
+  </div>
+</div>
+</div>
+
+<!-- Test Services -->
+<div class="container content-pane" >
+<div class="form-row">
+  <div class="form-group col-sm-6 content-element">
+    <p class="content-element">Request</p>
+    <textarea class="form-control form-control-sm content-element" (keydown)="requestJsonEdited()" name="inputJson" id="" [(ngModel)]="inputSource" cols="60" rows="7" accept=".json"></textarea>
+  </div>
+  <div class="form-group col-sm-6 content-element">
+    <p class="content-element">Response {{servicePath}}</p>
+    <textarea class="form-control form-control-sm content-element" id="outputJson" [(ngModel)]="dataService.actionResponse" cols="60" rows="7">{{ data | json }}</textarea>
+  </div>
+</div>
+<table><tr><td>
+  <div class="form-group row content-element">
+    
+    <upload-file class="col-sm-6 content-element" (change)="updateInput($event)"></upload-file>
+  
+  </div>
+</td></tr>
+</table>
+  
+<table>
+  <tr>
+    <td width="50%">
+          <div class="form-group row content-element">
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-dark btn-sm" name="btnSubmit" [disabled]="!selectedPartyTestAction" (click)="getResponde()">Submit</button>
+    </div>
+    <div class="col-sm-2 content-element" style="vertical-align:middle">
+      <p class="content-element">Target:</p>
+    </div>  
+    <div class="col-sm-6" style="position:right">
+        <select class="custom-select custom-select-sm custom-select-dark" id="partyInTest" [(ngModel)]="selectedPartyTestAction" (change)="requestJsonEdited()">
+            <option *ngFor="let space of dataService.spacesStore"  value="{{space.partyName}}">
+              {{space.partyName}}
+            </option>
+        </select>
+    </div>
+  </div></td>
+    <td width="50%" align="right" style="vertical-align:top">
+      <button class="btn btn-dark btn-sm " id="btnsave" onclick="download()" >Save</button>
+    </td>
+  </tr>
+</table>
+</div>
+<!-- Target Parties -->
+<div class="container content-pane">
+<table ><tr><td>
+  <div class="custom-control custom-checkbox custom-checkbox-dark" >
+    <input class="custom-control-input" (change)="toggleSelectors()" type="checkbox" [checked]="publishTo=='parties'" name="inlineRadioOptions" id="allParties" value="Parties">
+    <label class="custom-control-label" for="allParties">All Parties</label>
+  </div>
+</td>
+<td align="right">
+  <div>
+    <select class="form-control form-control-sm" id="role-selector" multiple="multiple" >
+      <option value="brokers">Brokers</option>
+      <option value="insurers">Insurers</option>
+      
+    </select>  
+  </div>
+</td>
+<td align="right">
+  <select class="form-control form-control-sm" id="party-selector" multiple="multiple" >
+    
+  </select> 
+</td>
+</tr>
+</table>
+</div>
+
+<!--Publish/Cancel -->
+<div class="container content-pane">
+  <table >
+    <tr>
+      <td colspan="2" >
+        <div title="Click to close" class="alert alert-dark" style="font-size:10px" [hidden]="dataService.resCreateAct.length==0">
+            
+            <button type="button" class="close" (click)="clearResultPublish()" >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div *ngFor="let result of dataService.resCreateAct" style="font-size:10px">
+              {{result}}
+            </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <div >
+          <button class="btn btn-dark col-4" (click)="publishToSpace()" type="button" id="btnPublish">Publish</button>
+        </div>
+      </td><td align="center">
+          <div >
+              <button class="btn btn-dark col-4" (click)="showConfirmDialog()" type="button" id="btnCancel">Cancel</button>
+          </div>
+      </td>
+    </tr>
+  </table>
+</div>
+ 

@@ -1,0 +1,44 @@
+{
+  "name": "proof",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "proofID": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "fk_agreementID": {
+      "type": "string",
+      "required": false
+    },
+    "fk_elementID": {
+      "type": "string",
+      "required": false
+    },
+    "proofBeforeHash": {
+      "type": "string",
+      "required": false
+    },
+    "proofAfterHash": {
+      "type": "string",
+      "required": false
+    },
+    "proofConsensus": {
+      "type": "number",
+      "required": false
+    },
+    "proof_HL_transactionID": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

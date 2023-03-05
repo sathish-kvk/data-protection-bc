@@ -1,0 +1,27 @@
+{
+    "agreementID":"8126ffe0-4f43-11e8-a6c7-a9ad596b9bff",
+    "elements":[
+        {
+            "elementRules": [
+                {
+                    "ruleType": "formula",
+                    "ruleText": "= PropertyValue / NumberOfSquareMetres"
+                }
+            ],
+            "elementValue": null,
+            "elementName": "BasicRent_Extend",
+            "elementType": "numeric"
+        }
+
+    ],
+    "parties":[
+        {
+          "partyName": "TestLandlord",
+          "partyID": "d28f57cb-f270-4f6f-adee-f3b14a90ffde"
+        },
+        {
+          "partyName": "TestTenant",
+          "partyID": "d8eb724e-4437-4bb0-968b-b65dfac61f1a"
+        }
+      ]
+}

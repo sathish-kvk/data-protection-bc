@@ -1,0 +1,88 @@
+
+
+
+
+p {
+  color: yellow;
+}
+
+.hash__input {
+  width: 60%;
+}
+
+.hash__details-datetime,
+.hash__details-infor {
+  display: flex;
+  width: 100%;
+  
+}
+
+.hash__details-party, .hash__details-date {
+  margin-right: 20px;
+  flex-basis: 30%;
+}
+
+.hash__details-hash, .hash__details-time {
+  flex-basis: 70%;
+}
+
+.content-pane {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: rgb(245, 245, 245);
+  border-spacing: 10px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 0px;
+  border-top-width: 5px;
+  border-bottom-style: double;
+  border-color: rgb(182, 182, 182);
+}
+
+message {
+  align-self: initial;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: black;
+
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  color: black;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  
+}
+
+.tablinks{
+  color: red;
+}
+

@@ -1,0 +1,1639 @@
+paths:
+  /agreements:
+    post:
+      tags:
+        - agreement
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: agreement.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    patch:
+      tags:
+        - agreement
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: agreement.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    put:
+      tags:
+        - agreement
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: agreement.replaceOrCreate__put_agreements
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    get:
+      tags:
+        - agreement
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: agreement.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/agreement'
+      deprecated: false
+  /agreements/replaceOrCreate:
+    post:
+      tags:
+        - agreement
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: agreement.replaceOrCreate__post_agreements_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  /agreements/upsertWithWhere:
+    post:
+      tags:
+        - agreement
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: agreement.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  '/agreements/{id}/exists':
+    get:
+      tags:
+        - agreement
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'agreement.exists__get_agreements_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/agreements/{id}':
+    head:
+      tags:
+        - agreement
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'agreement.exists__head_agreements_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - agreement
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: agreement.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    put:
+      tags:
+        - agreement
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'agreement.replaceById__put_agreements_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    delete:
+      tags:
+        - agreement
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: agreement.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - agreement
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: agreement.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreement'
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  '/agreements/{id}/replace':
+    post:
+      tags:
+        - agreement
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'agreement.replaceById__post_agreements_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  /agreements/findOne:
+    get:
+      tags:
+        - agreement
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: agreement.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  /agreements/update:
+    post:
+      tags:
+        - agreement
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: agreement.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /agreements/count:
+    get:
+      tags:
+        - agreement
+      summary: Count instances of the model matched by where from the data source.
+      operationId: agreement.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /signatures:
+    post:
+      tags:
+        - signature
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: signature.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/signature'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/signature'
+      deprecated: false
+    patch:
+      tags:
+        - signature
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: signature.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/signature'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/signature'
+      deprecated: false
+    put:
+      tags:
+        - signature
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: signature.replaceOrCreate__put_signatures
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/signature'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/signature'
+      deprecated: false
+    get:
+      tags:
+        - signature
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: signature.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/signature'
+      deprecated: false
+  /signatures/replaceOrCreate:
+    post:
+      tags:
+        - signature
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: signature.replaceOrCreate__post_signatures_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/signature'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/signature'
+      deprecated: false
+  /signatures/upsertWithWhere:
+    post:
+      tags:
+        - signature
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: signature.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/signature'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/signature'
+      deprecated: false
+  '/signatures/{id}/exists':
+    get:
+      tags:
+        - signature
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'signature.exists__get_signatures_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/signatures/{id}':
+    head:
+      tags:
+        - signature
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'signature.exists__head_signatures_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - signature
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: signature.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/signature'
+      deprecated: false
+    put:
+      tags:
+        - signature
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'signature.replaceById__put_signatures_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/signature'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/signature'
+      deprecated: false
+    delete:
+      tags:
+        - signature
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: signature.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - signature
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: signature.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/signature'
+        - name: id
+          in: path
+          description: signature id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/signature'
+      deprecated: false
+  '/signatures/{id}/replace':
+    post:
+      tags:
+        - signature
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'signature.replaceById__post_signatures_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/signature'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/signature'
+      deprecated: false
+  /signatures/findOne:
+    get:
+      tags:
+        - signature
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: signature.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/signature'
+      deprecated: false
+  /signatures/update:
+    post:
+      tags:
+        - signature
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: signature.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/signature'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /signatures/count:
+    get:
+      tags:
+        - signature
+      summary: Count instances of the model matched by where from the data source.
+      operationId: signature.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /agreementHashes:
+    post:
+      tags:
+        - agreementHash
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: agreementHash.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreementHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreementHash'
+      deprecated: false
+    patch:
+      tags:
+        - agreementHash
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: agreementHash.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreementHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreementHash'
+      deprecated: false
+    put:
+      tags:
+        - agreementHash
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: agreementHash.replaceOrCreate__put_agreementHashes
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreementHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreementHash'
+      deprecated: false
+    get:
+      tags:
+        - agreementHash
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: agreementHash.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/agreementHash'
+      deprecated: false
+  /agreementHashes/replaceOrCreate:
+    post:
+      tags:
+        - agreementHash
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: agreementHash.replaceOrCreate__post_agreementHashes_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreementHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreementHash'
+      deprecated: false
+  /agreementHashes/upsertWithWhere:
+    post:
+      tags:
+        - agreementHash
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: agreementHash.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreementHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreementHash'
+      deprecated: false
+  '/agreementHashes/{id}/exists':
+    get:
+      tags:
+        - agreementHash
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'agreementHash.exists__get_agreementHashes_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/agreementHashes/{id}':
+    head:
+      tags:
+        - agreementHash
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'agreementHash.exists__head_agreementHashes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - agreementHash
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: agreementHash.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreementHash'
+      deprecated: false
+    put:
+      tags:
+        - agreementHash
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'agreementHash.replaceById__put_agreementHashes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreementHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreementHash'
+      deprecated: false
+    delete:
+      tags:
+        - agreementHash
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: agreementHash.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - agreementHash
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: agreementHash.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreementHash'
+        - name: id
+          in: path
+          description: agreementHash id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreementHash'
+      deprecated: false
+  '/agreementHashes/{id}/replace':
+    post:
+      tags:
+        - agreementHash
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'agreementHash.replaceById__post_agreementHashes_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreementHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreementHash'
+      deprecated: false
+  /agreementHashes/findOne:
+    get:
+      tags:
+        - agreementHash
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: agreementHash.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreementHash'
+      deprecated: false
+  /agreementHashes/update:
+    post:
+      tags:
+        - agreementHash
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: agreementHash.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreementHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /agreementHashes/count:
+    get:
+      tags:
+        - agreementHash
+      summary: Count instances of the model matched by where from the data source.
+      operationId: agreementHash.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /tableHashes:
+    post:
+      tags:
+        - tableHash
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: tableHash.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tableHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tableHash'
+      deprecated: false
+    patch:
+      tags:
+        - tableHash
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: tableHash.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tableHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tableHash'
+      deprecated: false
+    put:
+      tags:
+        - tableHash
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: tableHash.replaceOrCreate__put_tableHashes
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tableHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tableHash'
+      deprecated: false
+    get:
+      tags:
+        - tableHash
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: tableHash.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/tableHash'
+      deprecated: false
+  /tableHashes/replaceOrCreate:
+    post:
+      tags:
+        - tableHash
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: tableHash.replaceOrCreate__post_tableHashes_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tableHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tableHash'
+      deprecated: false
+  /tableHashes/upsertWithWhere:
+    post:
+      tags:
+        - tableHash
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: tableHash.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/tableHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tableHash'
+      deprecated: false
+  '/tableHashes/{id}/exists':
+    get:
+      tags:
+        - tableHash
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'tableHash.exists__get_tableHashes_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/tableHashes/{id}':
+    head:
+      tags:
+        - tableHash
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'tableHash.exists__head_tableHashes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - tableHash
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: tableHash.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tableHash'
+      deprecated: false
+    put:
+      tags:
+        - tableHash
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'tableHash.replaceById__put_tableHashes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tableHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tableHash'
+      deprecated: false
+    delete:
+      tags:
+        - tableHash
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: tableHash.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - tableHash
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: tableHash.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/tableHash'
+        - name: id
+          in: path
+          description: tableHash id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tableHash'
+      deprecated: false
+  '/tableHashes/{id}/replace':
+    post:
+      tags:
+        - tableHash
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'tableHash.replaceById__post_tableHashes_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/tableHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tableHash'
+      deprecated: false
+  /tableHashes/findOne:
+    get:
+      tags:
+        - tableHash
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: tableHash.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/tableHash'
+      deprecated: false
+  /tableHashes/update:
+    post:
+      tags:
+        - tableHash
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: tableHash.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/tableHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /tableHashes/count:
+    get:
+      tags:
+        - tableHash
+      summary: Count instances of the model matched by where from the data source.
+      operationId: tableHash.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  agreement:
+    properties:
+      id:
+        type: string
+    additionalProperties: false
+  x-any:
+    properties: {}
+  signature:
+    properties:
+      agreementID:
+        type: string
+      unsignedHash:
+        type: string
+      signedHash:
+        type: string
+      timestamp:
+        type: string
+        format: date-time
+      id:
+        type: string
+    additionalProperties: false
+  agreementHash:
+    properties:
+      agreementID:
+        type: string
+      hash:
+        type: string
+      timestamp:
+        type: string
+        format: date-time
+      id:
+        type: string
+    additionalProperties: false
+  tableHash:
+    properties:
+      name:
+        type: string
+      value:
+        type: object
+      timestamp:
+        type: string
+        format: date-time
+    required:
+      - name
+    additionalProperties: false
+basePath: /api/cloudant
+swagger: '2.0'
+info:
+  x-ibm-name: cloudant-loopback
+  version: 1.0.0
+  title: cloudant-loopback
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+    tinh-party-a-lb-prod:
+      properties:
+        runtime-url: 'https://'
+        invoke-tls-profile: 'client:Loopback-client'
+    tinh-party-b-lb-prod:
+      properties:
+        runtime-url: 'https://tinh-party-b-lb-app.eu-gb.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+    tinh-party-c-lb-prod:
+      properties:
+        runtime-url: 'https://'
+        invoke-tls-profile: 'client:Loopback-client'
+    dxc-dip:
+      properties:
+        runtime-url: >-
+          https://apiconnect-8cccdda5-5d2b-4228-9510-8a47fe4de33b.dxc-digital-innovation-platform-dxcv.apic.eu-gb.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
+    lb-prod:
+      properties:
+        runtime-url: 'https://testtenant-loopback-cloudant.eu-gb.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false

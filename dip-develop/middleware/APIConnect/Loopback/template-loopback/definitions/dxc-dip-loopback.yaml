@@ -1,0 +1,4551 @@
+paths:
+  '/agreements/{id}/elements/{fk}':
+    get:
+      tags:
+        - agreement
+      summary: Find a related item by id for elements.
+      operationId: agreement.prototype.__findById__elements
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for elements
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+    delete:
+      tags:
+        - agreement
+      summary: Delete a related item by id for elements.
+      operationId: agreement.prototype.__destroyById__elements
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for elements
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - agreement
+      summary: Update a related item by id for elements.
+      operationId: agreement.prototype.__updateById__elements
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for elements
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/element'
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+  '/agreements/{id}/parties/{fk}':
+    get:
+      tags:
+        - agreement
+      summary: Find a related item by id for parties.
+      operationId: agreement.prototype.__findById__parties
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for parties
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+    delete:
+      tags:
+        - agreement
+      summary: Delete a related item by id for parties.
+      operationId: agreement.prototype.__destroyById__parties
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for parties
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - agreement
+      summary: Update a related item by id for parties.
+      operationId: agreement.prototype.__updateById__parties
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for parties
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/party'
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+  '/agreements/{id}/parties/rel/{fk}':
+    put:
+      tags:
+        - agreement
+      summary: Add a related item by id for parties.
+      operationId: agreement.prototype.__link__parties
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for parties
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+    delete:
+      tags:
+        - agreement
+      summary: Remove the parties relation to an item by id.
+      operationId: agreement.prototype.__unlink__parties
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for parties
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    head:
+      tags:
+        - agreement
+      summary: Check the existence of parties relation to an item by id.
+      operationId: agreement.prototype.__exists__parties
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for parties
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: boolean
+      deprecated: false
+  '/agreements/{id}/elements':
+    get:
+      tags:
+        - agreement
+      summary: Queries elements of agreement.
+      operationId: agreement.prototype.__get__elements
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/element'
+      deprecated: false
+    post:
+      tags:
+        - agreement
+      summary: Creates a new instance in elements of this model.
+      operationId: agreement.prototype.__create__elements
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/element'
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+    delete:
+      tags:
+        - agreement
+      summary: Deletes all elements of this model.
+      operationId: agreement.prototype.__delete__elements
+      parameters:
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/agreements/{id}/elements/count':
+    get:
+      tags:
+        - agreement
+      summary: Counts elements of agreement.
+      operationId: agreement.prototype.__count__elements
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/agreements/{id}/parties':
+    get:
+      tags:
+        - agreement
+      summary: Queries parties of agreement.
+      operationId: agreement.prototype.__get__parties
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/party'
+      deprecated: false
+    post:
+      tags:
+        - agreement
+      summary: Creates a new instance in parties of this model.
+      operationId: agreement.prototype.__create__parties
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/party'
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+    delete:
+      tags:
+        - agreement
+      summary: Deletes all parties of this model.
+      operationId: agreement.prototype.__delete__parties
+      parameters:
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/agreements/{id}/parties/count':
+    get:
+      tags:
+        - agreement
+      summary: Counts parties of agreement.
+      operationId: agreement.prototype.__count__parties
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /agreements:
+    post:
+      tags:
+        - agreement
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: agreement.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    patch:
+      tags:
+        - agreement
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: agreement.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    put:
+      tags:
+        - agreement
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: agreement.replaceOrCreate__put_agreements
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    get:
+      tags:
+        - agreement
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: agreement.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/agreement'
+      deprecated: false
+  /agreements/replaceOrCreate:
+    post:
+      tags:
+        - agreement
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: agreement.replaceOrCreate__post_agreements_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  /agreements/upsertWithWhere:
+    post:
+      tags:
+        - agreement
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: agreement.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  '/agreements/{id}/exists':
+    get:
+      tags:
+        - agreement
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'agreement.exists__get_agreements_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/agreements/{id}':
+    head:
+      tags:
+        - agreement
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'agreement.exists__head_agreements_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - agreement
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: agreement.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    put:
+      tags:
+        - agreement
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'agreement.replaceById__put_agreements_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    delete:
+      tags:
+        - agreement
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: agreement.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - agreement
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: agreement.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreement'
+        - name: id
+          in: path
+          description: agreement id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  '/agreements/{id}/replace':
+    post:
+      tags:
+        - agreement
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'agreement.replaceById__post_agreements_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  /agreements/findOne:
+    get:
+      tags:
+        - agreement
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: agreement.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  /agreements/update:
+    post:
+      tags:
+        - agreement
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: agreement.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreement'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /agreements/count:
+    get:
+      tags:
+        - agreement
+      summary: Count instances of the model matched by where from the data source.
+      operationId: agreement.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/parties/{id}/agreements/{fk}':
+    get:
+      tags:
+        - party
+      summary: Find a related item by id for agreements.
+      operationId: party.prototype.__findById__agreements
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for agreements
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    delete:
+      tags:
+        - party
+      summary: Delete a related item by id for agreements.
+      operationId: party.prototype.__destroyById__agreements
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for agreements
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - party
+      summary: Update a related item by id for agreements.
+      operationId: party.prototype.__updateById__agreements
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for agreements
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/agreement'
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  '/parties/{id}/agreements/rel/{fk}':
+    put:
+      tags:
+        - party
+      summary: Add a related item by id for agreements.
+      operationId: party.prototype.__link__agreements
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for agreements
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+    delete:
+      tags:
+        - party
+      summary: Remove the agreements relation to an item by id.
+      operationId: party.prototype.__unlink__agreements
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for agreements
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    head:
+      tags:
+        - party
+      summary: Check the existence of agreements relation to an item by id.
+      operationId: party.prototype.__exists__agreements
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for agreements
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: boolean
+      deprecated: false
+  '/parties/{id}/agreements':
+    get:
+      tags:
+        - party
+      summary: Queries agreements of party.
+      operationId: party.prototype.__get__agreements
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/agreement'
+      deprecated: false
+    post:
+      tags:
+        - party
+      summary: Creates a new instance in agreements of this model.
+      operationId: party.prototype.__create__agreements
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/agreement'
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+    delete:
+      tags:
+        - party
+      summary: Deletes all agreements of this model.
+      operationId: party.prototype.__delete__agreements
+      parameters:
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/parties/{id}/agreements/count':
+    get:
+      tags:
+        - party
+      summary: Counts agreements of party.
+      operationId: party.prototype.__count__agreements
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /parties:
+    post:
+      tags:
+        - party
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: party.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+    patch:
+      tags:
+        - party
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: party.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+    put:
+      tags:
+        - party
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: party.replaceOrCreate__put_parties
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+    get:
+      tags:
+        - party
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: party.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/party'
+      deprecated: false
+  /parties/replaceOrCreate:
+    post:
+      tags:
+        - party
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: party.replaceOrCreate__post_parties_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+  /parties/upsertWithWhere:
+    post:
+      tags:
+        - party
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: party.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+  '/parties/{id}/exists':
+    get:
+      tags:
+        - party
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'party.exists__get_parties_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/parties/{id}':
+    head:
+      tags:
+        - party
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'party.exists__head_parties_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - party
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: party.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+    put:
+      tags:
+        - party
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'party.replaceById__put_parties_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+    delete:
+      tags:
+        - party
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: party.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - party
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: party.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/party'
+        - name: id
+          in: path
+          description: party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+  '/parties/{id}/replace':
+    post:
+      tags:
+        - party
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'party.replaceById__post_parties_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+  /parties/findOne:
+    get:
+      tags:
+        - party
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: party.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+  /parties/update:
+    post:
+      tags:
+        - party
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: party.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /parties/count:
+    get:
+      tags:
+        - party
+      summary: Count instances of the model matched by where from the data source.
+      operationId: party.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/elements/{id}/elementRules/{fk}':
+    get:
+      tags:
+        - element
+      summary: Find a related item by id for elementRules.
+      operationId: element.prototype.__findById__elementRules
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for elementRules
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: element id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+    delete:
+      tags:
+        - element
+      summary: Delete a related item by id for elementRules.
+      operationId: element.prototype.__destroyById__elementRules
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for elementRules
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: element id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - element
+      summary: Update a related item by id for elementRules.
+      operationId: element.prototype.__updateById__elementRules
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for elementRules
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/rule'
+        - name: id
+          in: path
+          description: element id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+  '/elements/{id}/elementRules':
+    get:
+      tags:
+        - element
+      summary: Queries elementRules of element.
+      operationId: element.prototype.__get__elementRules
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: element id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/rule'
+      deprecated: false
+    post:
+      tags:
+        - element
+      summary: Creates a new instance in elementRules of this model.
+      operationId: element.prototype.__create__elementRules
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/rule'
+        - name: id
+          in: path
+          description: element id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+    delete:
+      tags:
+        - element
+      summary: Deletes all elementRules of this model.
+      operationId: element.prototype.__delete__elementRules
+      parameters:
+        - name: id
+          in: path
+          description: element id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/elements/{id}/elementRules/count':
+    get:
+      tags:
+        - element
+      summary: Counts elementRules of element.
+      operationId: element.prototype.__count__elementRules
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: element id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /elements:
+    post:
+      tags:
+        - element
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: element.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/element'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+    patch:
+      tags:
+        - element
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: element.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/element'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+    put:
+      tags:
+        - element
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: element.replaceOrCreate__put_elements
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/element'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+    get:
+      tags:
+        - element
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: element.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/element'
+      deprecated: false
+  /elements/replaceOrCreate:
+    post:
+      tags:
+        - element
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: element.replaceOrCreate__post_elements_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/element'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+  /elements/upsertWithWhere:
+    post:
+      tags:
+        - element
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: element.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/element'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+  '/elements/{id}/exists':
+    get:
+      tags:
+        - element
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'element.exists__get_elements_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/elements/{id}':
+    head:
+      tags:
+        - element
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'element.exists__head_elements_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - element
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: element.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+    put:
+      tags:
+        - element
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'element.replaceById__put_elements_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/element'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+    delete:
+      tags:
+        - element
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: element.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - element
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: element.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/element'
+        - name: id
+          in: path
+          description: element id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+  '/elements/{id}/replace':
+    post:
+      tags:
+        - element
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'element.replaceById__post_elements_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/element'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+  /elements/findOne:
+    get:
+      tags:
+        - element
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: element.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/element'
+      deprecated: false
+  /elements/update:
+    post:
+      tags:
+        - element
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: element.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/element'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /elements/count:
+    get:
+      tags:
+        - element
+      summary: Count instances of the model matched by where from the data source.
+      operationId: element.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/agreement_has_parties/{id}/agreement':
+    get:
+      tags:
+        - agreement_has_party
+      summary: Fetches belongsTo relation agreement.
+      operationId: agreement_has_party.prototype.__get__agreement
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: agreement_has_party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement'
+      deprecated: false
+  '/agreement_has_parties/{id}/party':
+    get:
+      tags:
+        - agreement_has_party
+      summary: Fetches belongsTo relation party.
+      operationId: agreement_has_party.prototype.__get__party
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: agreement_has_party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/party'
+      deprecated: false
+  /agreement_has_parties:
+    post:
+      tags:
+        - agreement_has_party
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: agreement_has_party.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement_has_party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+    patch:
+      tags:
+        - agreement_has_party
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: agreement_has_party.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement_has_party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+    put:
+      tags:
+        - agreement_has_party
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: agreement_has_party.replaceOrCreate__put_agreement_has_parties
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement_has_party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+    get:
+      tags:
+        - agreement_has_party
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: agreement_has_party.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+  /agreement_has_parties/replaceOrCreate:
+    post:
+      tags:
+        - agreement_has_party
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: >-
+        agreement_has_party.replaceOrCreate__post_agreement_has_parties_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement_has_party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+  /agreement_has_parties/upsertWithWhere:
+    post:
+      tags:
+        - agreement_has_party
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: agreement_has_party.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreement_has_party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+  '/agreement_has_parties/{id}/exists':
+    get:
+      tags:
+        - agreement_has_party
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'agreement_has_party.exists__get_agreement_has_parties_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/agreement_has_parties/{id}':
+    head:
+      tags:
+        - agreement_has_party
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'agreement_has_party.exists__head_agreement_has_parties_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - agreement_has_party
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: agreement_has_party.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+    put:
+      tags:
+        - agreement_has_party
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'agreement_has_party.replaceById__put_agreement_has_parties_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement_has_party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+    delete:
+      tags:
+        - agreement_has_party
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: agreement_has_party.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - agreement_has_party
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: agreement_has_party.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreement_has_party'
+        - name: id
+          in: path
+          description: agreement_has_party id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+  '/agreement_has_parties/{id}/replace':
+    post:
+      tags:
+        - agreement_has_party
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'agreement_has_party.replaceById__post_agreement_has_parties_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/agreement_has_party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+  /agreement_has_parties/findOne:
+    get:
+      tags:
+        - agreement_has_party
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: agreement_has_party.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/agreement_has_party'
+      deprecated: false
+  /agreement_has_parties/update:
+    post:
+      tags:
+        - agreement_has_party
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: agreement_has_party.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/agreement_has_party'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /agreement_has_parties/count:
+    get:
+      tags:
+        - agreement_has_party
+      summary: Count instances of the model matched by where from the data source.
+      operationId: agreement_has_party.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /agreement_has_parties/delete:
+    post:
+      tags:
+        - agreement_has_party
+      summary: Delete all matching records.
+      operationId: agreement_has_party.deleteAgreementParties
+      parameters:
+        - name: condition
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Agreementhasparty'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: The number of instances deleted
+            type: object
+      deprecated: false
+  /rules:
+    post:
+      tags:
+        - rule
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: rule.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/rule'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+    patch:
+      tags:
+        - rule
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: rule.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/rule'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+    put:
+      tags:
+        - rule
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: rule.replaceOrCreate__put_rules
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/rule'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+    get:
+      tags:
+        - rule
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: rule.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/rule'
+      deprecated: false
+  /rules/replaceOrCreate:
+    post:
+      tags:
+        - rule
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: rule.replaceOrCreate__post_rules_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/rule'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+  /rules/upsertWithWhere:
+    post:
+      tags:
+        - rule
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: rule.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/rule'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+  '/rules/{id}/exists':
+    get:
+      tags:
+        - rule
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'rule.exists__get_rules_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/rules/{id}':
+    head:
+      tags:
+        - rule
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'rule.exists__head_rules_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - rule
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: rule.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+    put:
+      tags:
+        - rule
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'rule.replaceById__put_rules_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/rule'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+    delete:
+      tags:
+        - rule
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: rule.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - rule
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: rule.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/rule'
+        - name: id
+          in: path
+          description: rule id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+  '/rules/{id}/replace':
+    post:
+      tags:
+        - rule
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'rule.replaceById__post_rules_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/rule'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+  /rules/findOne:
+    get:
+      tags:
+        - rule
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: rule.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/rule'
+      deprecated: false
+  /rules/update:
+    post:
+      tags:
+        - rule
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: rule.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/rule'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /rules/count:
+    get:
+      tags:
+        - rule
+      summary: Count instances of the model matched by where from the data source.
+      operationId: rule.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /proofs:
+    post:
+      tags:
+        - proof
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: proof.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proof'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proof'
+      deprecated: false
+    patch:
+      tags:
+        - proof
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: proof.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proof'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proof'
+      deprecated: false
+    put:
+      tags:
+        - proof
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: proof.replaceOrCreate__put_proofs
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proof'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proof'
+      deprecated: false
+    get:
+      tags:
+        - proof
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: proof.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/proof'
+      deprecated: false
+  /proofs/replaceOrCreate:
+    post:
+      tags:
+        - proof
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: proof.replaceOrCreate__post_proofs_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proof'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proof'
+      deprecated: false
+  /proofs/upsertWithWhere:
+    post:
+      tags:
+        - proof
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: proof.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/proof'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proof'
+      deprecated: false
+  '/proofs/{id}/exists':
+    get:
+      tags:
+        - proof
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'proof.exists__get_proofs_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/proofs/{id}':
+    head:
+      tags:
+        - proof
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'proof.exists__head_proofs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - proof
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: proof.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proof'
+      deprecated: false
+    put:
+      tags:
+        - proof
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'proof.replaceById__put_proofs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proof'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proof'
+      deprecated: false
+    delete:
+      tags:
+        - proof
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: proof.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - proof
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: proof.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/proof'
+        - name: id
+          in: path
+          description: proof id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proof'
+      deprecated: false
+  '/proofs/{id}/replace':
+    post:
+      tags:
+        - proof
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'proof.replaceById__post_proofs_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/proof'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proof'
+      deprecated: false
+  /proofs/findOne:
+    get:
+      tags:
+        - proof
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: proof.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/proof'
+      deprecated: false
+  /proofs/update:
+    post:
+      tags:
+        - proof
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: proof.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/proof'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /proofs/count:
+    get:
+      tags:
+        - proof
+      summary: Count instances of the model matched by where from the data source.
+      operationId: proof.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /assents:
+    post:
+      tags:
+        - assent
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: assent.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/assent'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/assent'
+      deprecated: false
+    patch:
+      tags:
+        - assent
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: assent.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/assent'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/assent'
+      deprecated: false
+    put:
+      tags:
+        - assent
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: assent.replaceOrCreate__put_assents
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/assent'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/assent'
+      deprecated: false
+    get:
+      tags:
+        - assent
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: assent.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/assent'
+      deprecated: false
+  /assents/replaceOrCreate:
+    post:
+      tags:
+        - assent
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: assent.replaceOrCreate__post_assents_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/assent'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/assent'
+      deprecated: false
+  /assents/upsertWithWhere:
+    post:
+      tags:
+        - assent
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: assent.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/assent'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/assent'
+      deprecated: false
+  '/assents/{id}/exists':
+    get:
+      tags:
+        - assent
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'assent.exists__get_assents_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/assents/{id}':
+    head:
+      tags:
+        - assent
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'assent.exists__head_assents_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - assent
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: assent.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/assent'
+      deprecated: false
+    put:
+      tags:
+        - assent
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'assent.replaceById__put_assents_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/assent'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/assent'
+      deprecated: false
+    delete:
+      tags:
+        - assent
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: assent.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - assent
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: assent.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/assent'
+        - name: id
+          in: path
+          description: assent id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/assent'
+      deprecated: false
+  '/assents/{id}/replace':
+    post:
+      tags:
+        - assent
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'assent.replaceById__post_assents_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/assent'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/assent'
+      deprecated: false
+  /assents/findOne:
+    get:
+      tags:
+        - assent
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: assent.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/assent'
+      deprecated: false
+  /assents/update:
+    post:
+      tags:
+        - assent
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: assent.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/assent'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /assents/count:
+    get:
+      tags:
+        - assent
+      summary: Count instances of the model matched by where from the data source.
+      operationId: assent.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/documents/{id}/documentHash':
+    get:
+      tags:
+        - document
+      summary: Fetches belongsTo relation documentHash.
+      operationId: document.prototype.__get__documentHash
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: document id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+  /documents:
+    post:
+      tags:
+        - document
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: document.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/document'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/document'
+      deprecated: false
+    patch:
+      tags:
+        - document
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: document.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/document'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/document'
+      deprecated: false
+    put:
+      tags:
+        - document
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: document.replaceOrCreate__put_documents
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/document'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/document'
+      deprecated: false
+    get:
+      tags:
+        - document
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: document.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/document'
+      deprecated: false
+  /documents/replaceOrCreate:
+    post:
+      tags:
+        - document
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: document.replaceOrCreate__post_documents_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/document'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/document'
+      deprecated: false
+  /documents/upsertWithWhere:
+    post:
+      tags:
+        - document
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: document.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/document'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/document'
+      deprecated: false
+  '/documents/{id}/exists':
+    get:
+      tags:
+        - document
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'document.exists__get_documents_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/documents/{id}':
+    head:
+      tags:
+        - document
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'document.exists__head_documents_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - document
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: document.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/document'
+      deprecated: false
+    put:
+      tags:
+        - document
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'document.replaceById__put_documents_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/document'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/document'
+      deprecated: false
+    delete:
+      tags:
+        - document
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: document.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - document
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: document.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/document'
+        - name: id
+          in: path
+          description: document id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/document'
+      deprecated: false
+  '/documents/{id}/replace':
+    post:
+      tags:
+        - document
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'document.replaceById__post_documents_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/document'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/document'
+      deprecated: false
+  /documents/findOne:
+    get:
+      tags:
+        - document
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: document.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/document'
+      deprecated: false
+  /documents/update:
+    post:
+      tags:
+        - document
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: document.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/document'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /documents/count:
+    get:
+      tags:
+        - document
+      summary: Count instances of the model matched by where from the data source.
+      operationId: document.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /documentHashes:
+    post:
+      tags:
+        - documentHash
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: documentHash.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/documentHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+    patch:
+      tags:
+        - documentHash
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: documentHash.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/documentHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+    put:
+      tags:
+        - documentHash
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: documentHash.replaceOrCreate__put_documentHashes
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/documentHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+    get:
+      tags:
+        - documentHash
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: documentHash.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/documentHash'
+      deprecated: false
+  /documentHashes/replaceOrCreate:
+    post:
+      tags:
+        - documentHash
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: documentHash.replaceOrCreate__post_documentHashes_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/documentHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+  /documentHashes/upsertWithWhere:
+    post:
+      tags:
+        - documentHash
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: documentHash.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/documentHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+  '/documentHashes/{id}/exists':
+    get:
+      tags:
+        - documentHash
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'documentHash.exists__get_documentHashes_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/documentHashes/{id}':
+    head:
+      tags:
+        - documentHash
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'documentHash.exists__head_documentHashes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - documentHash
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: documentHash.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+    put:
+      tags:
+        - documentHash
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'documentHash.replaceById__put_documentHashes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/documentHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+    delete:
+      tags:
+        - documentHash
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: documentHash.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - documentHash
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: documentHash.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/documentHash'
+        - name: id
+          in: path
+          description: documentHash id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+  '/documentHashes/{id}/replace':
+    post:
+      tags:
+        - documentHash
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'documentHash.replaceById__post_documentHashes_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/documentHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+  /documentHashes/findOne:
+    get:
+      tags:
+        - documentHash
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: documentHash.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/documentHash'
+      deprecated: false
+  /documentHashes/update:
+    post:
+      tags:
+        - documentHash
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: documentHash.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/documentHash'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /documentHashes/count:
+    get:
+      tags:
+        - documentHash
+      summary: Count instances of the model matched by where from the data source.
+      operationId: documentHash.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  x-any:
+    properties: {}
+  element:
+    properties:
+      elementID:
+        type: string
+      elementName:
+        type: string
+      elementType:
+        type: string
+      elementValue:
+        type: string
+      element_parent_elementID:
+        type: string
+      fk_agreementID:
+        type: string
+      writeOne:
+        type: boolean
+    required:
+      - elementID
+      - fk_agreementID
+    additionalProperties: false
+  party:
+    properties:
+      partyID:
+        type: string
+      partyName:
+        type: string
+      partyRole:
+        type: string
+      partyPublicKey:
+        type: string
+    required:
+      - partyID
+    additionalProperties: false
+  agreement_has_party:
+    properties:
+      agreement_agreementID:
+        type: string
+      party_partyID:
+        type: string
+    required:
+      - agreement_agreementID
+      - party_partyID
+    additionalProperties: false
+  agreement:
+    properties:
+      agreementID:
+        type: string
+      agreementName:
+        type: string
+      agreementStatus:
+        type: string
+      agreementHash:
+        type: string
+      agreementChannelID:
+        type: string
+      lastProofID:
+        type: string
+    required:
+      - agreementID
+    additionalProperties: false
+  rule:
+    properties:
+      ruleID:
+        type: string
+      ruleType:
+        type: string
+      ruleText:
+        type: string
+      fk_ElementID:
+        type: string
+    required:
+      - ruleID
+    additionalProperties: false
+  proof:
+    properties:
+      proofID:
+        type: string
+      fk_agreementID:
+        type: string
+      fk_elementID:
+        type: string
+      proofBeforeHash:
+        type: string
+      proofAfterHash:
+        type: string
+      proofConsensus:
+        type: number
+        format: double
+      proof_HL_transactionID:
+        type: string
+    required:
+      - proofID
+    additionalProperties: false
+  assent:
+    properties:
+      fk_proofID:
+        type: string
+      fk_partyID:
+        type: string
+      assent_signedHash:
+        type: string
+    required:
+      - fk_proofID
+    additionalProperties: false
+  documentHash:
+    properties:
+      documentContent:
+        type: string
+      documentHashID:
+        type: string
+    required:
+      - documentHashID
+    additionalProperties: false
+  document:
+    properties:
+      agreementID:
+        type: string
+      createdDate:
+        type: string
+        format: date-time
+      documentHashID:
+        type: string
+      documentID:
+        type: string
+      documentName:
+        type: string
+      documentType:
+        type: string
+      elementID:
+        type: string
+    required:
+      - documentHashID
+      - documentID
+    additionalProperties: false
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: mysql-loopback
+  version: 1.0.0
+  title: mysql-loopback
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+    dxc-dip:
+      properties:
+        runtime-url: >-
+          https://apiconnect-77ecb4c4-4a7d-42d6-9e64-2c5ebd580968.dxc-digital-innovation-platform-dxcv.apic.eu-gb.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
+    tinh-party-a-lb-prod:
+      properties:
+        runtime-url: 'https://tinh-party-a-lb-app.eu-gb.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+    tinh-party-b-lb-prod:
+      properties:
+        runtime-url: 'https://tinh-party-b-lb-app.eu-gb.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+    tinh-party-c-lb-prod:
+      properties:
+        runtime-url: 'https://tinh-party-c-lb-app.eu-gb.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+    lb-prod:
+      properties:
+        runtime-url: 'https://barnsleylandlordservices-loopback-mysql.eu-gb.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false

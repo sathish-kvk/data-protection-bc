@@ -1,0 +1,40 @@
+{
+  "name": "party",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "partyID": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "partyName": {
+      "type": "string",
+      "required": false
+    },
+    "partyRole": {
+      "type": "string",
+      "required": false
+    },
+    "partyPublicKey": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "agreements": {
+      "type": "hasMany",
+      "model": "agreement",
+      "foreignKey": "party_partyID",
+      "through": "agreement_has_party",
+      "keyThrough": "agreement_agreementID"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

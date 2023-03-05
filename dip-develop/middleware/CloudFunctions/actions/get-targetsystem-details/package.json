@@ -1,0 +1,7 @@
+{
+  "name": "get-targetsystem-details",
+  "version": "1.0.0",
+  "main": "get-targetsystem-details.js",
+  "dependencies": {
+  }
+}

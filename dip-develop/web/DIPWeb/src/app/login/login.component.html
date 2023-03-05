@@ -1,0 +1,12 @@
+<div class="content" >
+      <h3>Login</h3>
+      <img src="./assets/img/loading_icon_page.gif" [hidden]="!loading"/>
+    <div class="view" style="height: 600px">
+        <label for="client_id"><b>Please provide your access key to login</b></label><br>
+        <input type="text" [(ngModel)]="client_id" (keyup)="checkEnterKey($event)" placeholder="Enter your access key to login" name="client_id" required >
+      <div>
+      <span class="alert" style="padding-left: 0px">{{client_idAlert}}</span> 
+      </div> 
+      <button type="submit" [disabled]="loading || !client_id" (click)="getAuthorization()">Login</button>
+    </div>
+  </div>

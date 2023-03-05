@@ -1,0 +1,178 @@
+<div class="content">
+    <app-pagename pageName="Propose" propose="active" partyName="{{loginParty}}"></app-pagename>
+    <div class="view">
+      <div class="row">
+        <div class="col-sm-6" style="padding-top: 8px">
+            <textarea readonly style="height: 548px" rows="25" [(ngModel)]="exportJson"></textarea>
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="row">
+                  <input placeholder="Agreement ID" type="text" class="form-control form-control-sm" [(ngModel)]="agreementId" width="100%">
+              </div>
+              <span><strong style="color: red; font-size: 12px">{{proposeResult}}</strong></span>
+              <!--
+              <div class="row">
+                  <select (change)="clearJsonView()"  id="listofparties" [(ngModel)]="selectedParty">
+                      <option *ngFor="let space of listOfParties"  value="{{space.partyName}}">
+                        {{space.partyName}}
+                      </option>
+                  </select>
+              </div>
+              -->
+            </div>
+            <div class="col-sm-3" style="padding-bottom: 15px">
+                <button class="btn-block"  (click)="exportAgreement()">Export</button>
+            </div>
+          </div>
+          <hr>
+          <div class="row" style=" height: 470px; overflow-y: scroll;font-size: 12px; padding-right: 20px">
+              <table width="100%">
+                <tr *ngFor="let party of elementsInAgreement">
+                  <td >
+                    <div style=" padding: 7px;border-color: rgb(221, 221, 221); border-width: 1px; border-style: solid">
+                    <table width="100%" >
+                      
+                      <tr>
+                        <td width="100px">Element Name</td>
+                        <td style="font-size: 14px"><b>{{party.elementName}}</b></td>
+                      </tr>
+                      <tr>
+                        <td width="100px">Current Value</td>
+                        <td>{{party.elementValue}}</td>
+                      </tr>
+                      <tr>
+                        <td width="100px">Proposed Value</td>
+                        <td *ngIf="party.elementType!='documentHash' && party.elementType!='tableHash'">
+                          <input   type="text" id="{{party.elementID}}" class="form-control form-control-sm" width="100%">                        
+                        </td>
+                        <td *ngIf="party.elementType=='tableHash'">
+                            <input disabled accept=".json" id="{{party.elementID}}" type="file" (change)="inputOnchange($event, party.elementID)" #fileJson/>
+                        </td>
+                        <td *ngIf="party.elementType=='documentHash'">
+                            <input id="{{party.elementID}}" type="file" (change)="inputOnchange($event, party.elementID)"  #fileDoc/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td *ngIf="party.elementType!='documentHash' && party.elementType!='tableHash'" colspan="2" align="right">
+                          <img [hidden]="!proposing[party.elementID]" src="../../assets/img/loading_icon_sm.gif">
+                          <!--
+                          <button class="btn btn-dark btn-sm" style="width:100px" [disabled]="loading || (party.elementValue && party.writeOnce)" [hidden]="proposing[party.elementID]" (click)="proposeElement(party.elementID)">Propose</button>
+                          -->
+                          <button class="btn btn-dark btn-sm" style="width:100px" [disabled]="loading" [hidden]="proposing[party.elementID]" (click)="proposeElement(party.elementID)">Propose</button>
+                        </td>
+                        <td *ngIf="party.elementType=='documentHash'" colspan="2" align="right">
+                          <img [hidden]="!proposing[party.elementID]" src="../../assets/img/loading_icon_sm.gif">
+                          <button class="btn btn-dark btn-sm" style="width:100px" [disabled]="loading" [hidden]="proposing[party.elementID]" (click)="proposeDocument(party.elementID)">Propose</button>
+                        </td>
+                        <td *ngIf=" party.elementType=='tableHash'" colspan="2" align="right">
+                          <img [hidden]="!proposing[party.elementID]" src="../../assets/img/loading_icon_sm.gif">
+                          <button class="btn btn-dark btn-sm" style="width:100px" disabled [hidden]="proposing[party.elementID]" (click)="proposeDocument(party.elementID)">Propose</button>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  </td>
+                </tr>
+                <!-- for screenshot review popose
+                <tr>
+                  <td>
+                    <table width="100%">
+                      <tr>
+                        <td width="100px">Element Name</td>
+                        <td style="font-size: 14px"><b>Scan</b></td>
+                      </tr>
+                      <tr>
+                        <td width="100px">Current Value</td>
+                        <td>e3c5a603e5be64065393bd782cc5e0a9b063e7cfde66e993c0a5ffe3246f5389</td>
+                      </tr>
+                      <tr>
+                        <td width="100px">Proposed Value</td>
+                        <td align="right">
+                          <div class="row " style="padding-left: 15px">
+                            <input type="file"/>
+                
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td colspan="2" align="right">
+                            <img hidden src="../../assets/img/loading_icon_sm.gif">
+                            <button class="btn btn-dark btn-sm" style="width:100px" [disabled]="loading"  (click)="proposeElement(party.elementID)">Propose</button>
+                          </td>
+                        </tr>
+                    </table>
+                  </td>
+                </tr>
+                end of screenshot review-->
+              </table>
+            </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+<!--
+<div class="row" style="padding-top: 10px">
+  <div class="col-sm-2"><p><strong>Agreement ID:</strong></p></div>
+  <div class="col-sm-4"><input type="text" class="form-control form-control-sm" [(ngModel)]="agreementId" width="100%"></div>
+  <div class="col-sm-2">
+    
+    <button class="btn btn-dark btn-sm btn-block" [disabled]="!selectedParty" (click)="exportAgreement()">Export</button>
+  </div>
+</div>
+<div class="row" >
+  <div class="col-sm-2"><p><strong>Parties:</strong></p></div>
+  <div class="col-sm-4">
+      <select (change)="clearJsonView()"  id="listofparties" [(ngModel)]="selectedParty" class="custom-select custom-select-sm custom-select-dark">
+          <option *ngFor="let space of listOfParties"  value="{{space.partyName}}">
+            {{space.partyName}}
+          </option>
+      </select>
+  </div>
+</div>
+<div class="row" [hidden]="!lastPartyApprove">
+  <div class="col-sm-6">
+      <img src="../../assets/img/loading_icon_page.gif">
+  </div>
+</div>
+<div class="row" [hidden]="lastPartyApprove" style="padding-right: 15px">
+  <div class="col-sm-6">
+    <textarea class="form-control form-control-sm" cols="80" rows="25" [(ngModel)]="exportJson"></textarea>
+  </div>
+  <div class="col-sm-6" style=" height: 530px; overflow-y: scroll; font-size: 12px; padding-right: 20px">
+    
+      <span  style="color:red"><strong>{{proposeResult}}</strong></span>
+   
+    <table width="100%">
+      <tr *ngFor="let party of elementsInAgreement">
+        <td>
+          <table width="100%">
+            <tr>
+              <td width="30%">Element Name</td>
+              <td style="font-size: 14px"><b>{{party.elementName}}</b></td>
+            </tr>
+            <tr>
+              <td width="30%">Current Value</td>
+              <td>{{party.elementValue}}</td>
+            </tr>
+            <tr>
+              <td width="30%">Proposed Value</td>
+              <td><input type="text" id="{{party.elementID}}" class="form-control form-control-sm" width="100%"></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="right">
+                <img [hidden]="!proposing[party.elementID]" src="../../assets/img/loading_icon_sm.gif">
+                <button class="btn btn-dark btn-sm" [disabled]="loading" [hidden]="proposing[party.elementID]" (click)="proposeElement(party.elementID)">Propose</button>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+-->

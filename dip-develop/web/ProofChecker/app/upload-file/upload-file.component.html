@@ -1,0 +1,12 @@
+
+<div class="form-row">
+  
+  <div class="col-sm-6">
+  <button id="btnupload" (click)="clickBtn()" class="btn btn-dark btn-sm">{{filename}}</button>
+  </div>
+  <div class="col-sm-2">
+      <input class="form-control form-control-sm" type="file" id="uploadfile" style="visibility: hidden" width="2px" (change)="inputOnchange($event)" #test>
+  </div>
+</div>
+
+

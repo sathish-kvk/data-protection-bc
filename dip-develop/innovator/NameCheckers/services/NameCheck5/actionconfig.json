@@ -1,0 +1,7 @@
+{
+  "innovator": "NameCheckers",
+  "publishTo": ["BROKERS"],
+  "name": "NameCheck5",
+  "file": "NameCheck5.js",
+  "notifyEmail":"tdo43@csc.com"
+}

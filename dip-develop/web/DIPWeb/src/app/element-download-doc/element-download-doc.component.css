@@ -1,0 +1,8 @@
+div {
+    border-color: rgb(230, 230, 230);
+    padding: 7px;
+    border-width: 1px;
+    border-style: solid;
+    border-right-style: double;
+    border-bottom-style: double;
+}

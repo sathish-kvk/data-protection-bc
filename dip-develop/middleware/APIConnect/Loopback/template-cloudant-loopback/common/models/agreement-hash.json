@@ -1,0 +1,26 @@
+{
+  "name": "agreementHash",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "agreementID": {
+      "type": "string",
+      "required": false
+    },
+    "hash": {
+      "type": "string",
+      "required": false
+    },
+    "timestamp": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,5 @@
+---
+applications:
+ - name: DIPWebApp
+   routs: random
+   memory: 256M
